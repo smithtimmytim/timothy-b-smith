@@ -1,0 +1,405 @@
+@import "normalize";
+@import "bits";
+@import "type";
+@import "pagenavi";
+@import "compass/css3";
+
+body {
+  background: #f8f8f8 url(../img/bg.png) repeat;
+  color: rgba($bodyColor, .8);
+  @include sans;
+}
+
+
+header {
+  background: $darkBlue;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 30px 180px;
+  .logo {
+    width: 60px; height: 60px;
+    float: left;
+    margin: 0 30px 0 0;
+    @include transition (opacity .2s ease-in-out);
+    &:hover {
+      @include opacity (.7);
+    }
+  }
+  nav {
+    margin: 20px 0 0 0;
+    a {
+      color: $lightBlue;
+      font-weight: bold;
+      font-size: 15px;
+      margin-right: 30px;
+      &:hover {
+        color: $linkColor;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+header, article, footer {
+  padding-right: 180px;
+  padding-left: 180px;
+}
+
+p a, .show-notes li a, h3 a, li a {
+  color: rgba($bodyColor, .8);
+  border-bottom: 1px solid lighten($lightBlue, 10%);
+  &:hover {
+    border-color: $linkColor;
+  }
+}
+
+code {
+  background: #eee;
+  font-size: 15px;
+  padding: 2px 5px;
+  @include border-radius(4px);
+}
+
+.main-content {
+  background: white;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.entry {
+  border-top: 1px solid lighten($lightBlue, 10%);
+  padding: 40px 180px;
+  p.date {
+    @include sans;
+    color: $lightBlue;
+    float: right;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    display:block;
+  }
+  h2 {
+    margin-top: 35px;
+    width: 80%;
+    font-weight: 800;
+    a {
+      color: $darkBlue;
+      margin-top: 30px;
+      &:hover {
+        color: $linkColor;
+      }
+    }
+  }
+  img {
+    margin-bottom: 15px;
+  }
+  p {
+    @include serif;
+    font-size: 15px;
+    line-height: 26px;
+    margin: 0 0 15px 0;
+  }
+  blockquote {
+    margin: 20px 0;
+    border-left: 10px solid $jazzColor;
+    padding-left: 15px;
+    small {
+      font-size: 13px;
+      color: darken($lightBlue, 30%);
+      &:before {
+        content: "—";
+      }
+    }
+  }
+}
+
+ul {
+  margin: 0 0 20px 20px;
+  list-style-type: disc;
+  max-width: 520px;
+  li {
+    @include serif;
+    font-size: 15px;
+    margin: 0 !important;
+    padding: 5px 0;
+    line-height: 25px;
+  }
+}
+
+ol {
+  margin: 0 0 20px 20px;
+  padding: 0;
+}
+
+/* ----- Global Entry Stuff ----- */
+
+.meta_info {
+    margin: 40px 0 0 0;
+    max-width: none;
+    li {
+      border-bottom: 1px solid lighten($lightBlue, 10%);
+      color: $lightBlue;
+      list-style: none;
+      padding: 5px 0;
+      margin: 0;
+      font-size: 14px;
+      &:before {
+      content: "";
+      padding: 0;
+      }
+      a {
+        color: $linkColor;
+        border-bottom: none;
+        &:hover {
+          color: $gray;
+        }
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+hr {
+  border: solid lighten($lightBlue, 15%);
+  border-width: 5px 0 0;
+  clear: both;
+  margin: 35px auto;
+  height: 0;
+  width: auto;
+  max-width: 300px;
+  display: block;
+  padding: 0;
+}
+
+/* ----- Link Post Styles --- */
+
+a {
+  &.link-post {
+    @include iconfont;
+    font-size: 20px !important;
+    margin: 0 0 0 8px;
+    color: #bbb !important;
+    border-bottom: none !important;
+    font-weight: normal;
+    &:hover {
+      color: $linkColor !important;
+    }
+
+  }
+}
+
+.format-link {
+  h2 {
+    font-size: 20px;
+    line-height: 1.4;
+    a {
+      color: $darkBlue;
+      border-bottom: 1px solid lighten($lightBlue, 10%);
+      &:hover {
+        color: $gray;
+        border-color: $linkColor;
+      }
+    }
+  }
+}
+
+[data-icon]:before {
+  @include iconfont;
+  content: attr(data-icon);
+  speak: none; /* Not to be trusted, but hey. */
+}
+
+.screen-reader-text {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+/* ----- Video Post Styles ----- */
+
+.video-pusher {
+  width: 100%;
+}
+
+.home, .archive, .category {
+  .video-pusher {
+    margin-top: 40px;
+  }
+}
+
+.single-format-video, .single-post {
+  .entry {
+    border-top: none;
+  }
+}
+
+.comments {
+  border-top: 1px solid lighten($lightBlue, 10%);
+  padding: 40px 180px;
+  a {
+    color: $linkColor;
+  }
+}
+
+
+/* ---- Footer ---- */
+
+footer {
+  background: $darkBlue;
+  border-top: 5px solid $lightBlue;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 30px 180px;
+  p {
+    @include sans;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: $lightBlue;
+    display: inline-block;
+    &:last-child {
+      margin-bottom: 2px;
+    }
+    &.twitter-follow-button {
+      float: right;
+    }
+  }
+  a {
+    color: white;
+    border-bottom-color: $linkColor;
+    &:hover {
+      color: white;
+      border-bottom-color: $lightBlue;
+    }
+  }
+}
+
+/* ----- About Page ----- */
+
+.page-template-about-php, .page-template-contact-php {
+  .entry {
+    border-top: none;
+    overflow: hidden;
+  }
+}
+
+h2.statement {
+  font-size: 36px;
+  font-weight: 100;
+  width: 100%;
+  margin: 0 0 20px 0;
+  color: $bodyColor;
+  a {
+    color: $bodyColor;
+  }
+}
+
+.half-col {
+  width: 50%;
+  float: left;
+  &.left {
+    padding-right: 15px;
+  }
+  &.right {
+    padding-left: 15px;
+  }
+}
+
+.published {
+  margin: 0 0 20px 0;
+  li {
+    border-bottom: 1px solid lighten($lightBlue, 10%);
+    list-style: none;
+    display: block;
+    margin: 0;
+    a{
+      color: $linkColor;
+      border-bottom: none;
+        small {
+        display: block;
+        color: $lightBlue;
+        font-weight: bold;
+        margin-left: 2px;
+      }
+      &:hover {
+          color: darken($linkColor, 15%);
+        }
+    }
+  }
+}
+
+
+/* ----- Projects Page ----- */
+
+.projects small {
+  color: lighten($lightBlue, 10%);
+  font-weight: normal;
+  font-size: 19px;
+}
+
+
+
+/* ----- Contact Page ----- */
+
+form,fieldset,input,textarea,label,legend{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}
+
+.contactForm {
+  margin-top: 30px;
+}
+
+#contactName, #email, .message {
+  border: 1px solid rgba(black, .1);
+  padding: 10px;
+  @include transitions;
+  &:focus {
+    border-color: $linkColor;
+  }
+}
+
+#contactName, #email {
+  width: 49.6%;
+}
+
+.message {
+  display: block;
+  width: 100%;
+  resize: none;
+  margin: 10px 0;
+  height: 150px;
+}
+
+.send {
+  width: 100%;
+  padding: 15px 0;
+  background: $linkColor;
+  font-weight: bold;
+  color: white;
+  font-size: 16px;
+  &:hover {
+    background: $gray;
+  }
+}
+
+#wpstats {
+  display: none;
+}
+
+/* ----- Tags Styles ----- */
+
+.tax-head {
+  padding: 40px 180px;
+  font-weight: 800;
+}
+
+body {
+  &.tag {
+    background: $linkColor;
+  }
+}
