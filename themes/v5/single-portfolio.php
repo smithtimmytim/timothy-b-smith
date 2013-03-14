@@ -7,30 +7,26 @@ Template Name: Single Portfolio
 
 <section class="work-full">
   <div class="wrap">
-    <?php $image = get_post_meta($post->ID, 'full-portfolio-image', TRUE); ?>
-      <?php if($image) { ?><img src="<?php echo $image; ?>" alt="Portfolio Image for <?php the_title(); ?>" />
-    <?php } ?>
+    <img src="<?php the_field('portfolio_item_hero'); ?>" alt="Hero for <?php the_title(); ?>" />
   </div><!-- end .wrap -->
 
 </section>
 
 
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<?php the_post(); ?>
 
 <div class="main-content">  
   <div class="entry">
     
-    <h2><?php the_title(); ?><small><?php echo get_post_meta($post->ID, 'project-class', true); ?> Project</small> </h2>
+    <h2><?php the_title(); ?><small><?php the_field('portfolio_item_class'); ?> Project</small> </h2>
     <ul class="project-info">
-      <li><strong>Role:</strong> <?php echo get_post_meta($post->ID, 'project-role', true); ?></li>
-      <li><strong>Type:</strong> <?php echo get_post_meta($post->ID, 'project-type', true); ?></li>
-      <?php 
-    $url = get_post_meta($post->ID, 'project-URL', true); 
+      <li><strong>Role:</strong> <?php the_field('portfolio_item_role'); ?></li>
+      <li><strong>Type:</strong> <?php the_field('portfolio_item_type'); ?></li>
+      <?php
+        if( get_field('portfolio_item_url')): ?>
+          <li><a href="<?php the_field('portfolio_item_url'); ?>">Visit Project</a></li>
+      <?php endif; ?>
 
-      if ($url) {
-          echo "<li><a href='$url'>Visit Project</a></li>";
-      }
-    ?>
     </ul>
 
     <?php the_content(); ?>
@@ -44,12 +40,6 @@ Template Name: Single Portfolio
 
 
 
-
-
-
-
-
-  <?php endwhile; endif; ?>
 
 
 </div><!-- end .main-content -->
