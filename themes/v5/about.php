@@ -8,7 +8,7 @@ get_header()?>
   <div class="entry">
     
       <h2 class="statement">Designer, talker &amp; coffee addict.</h2>
-      <img src="<?php bloginfo('template_url'); ?>/img/headshot.png" alt="Head shot of Tim" />
+      <img src="<?php bloginfo('template_url'); ?>/img/tim_680x510.jpg" alt="Head shot of Tim" />
       <p>Tim Smith is a user interface and web designer based in St. Paul, Minnesota. A natural host, Tim inspires people all over the world with his podcast, <a href="http://theeastwing.net" title="The East Wing">The East Wing</a>, where he interviews some of the best from the web and creative industries.</p>
       <p>With a passion for the details and making great work, Tim is also the Editor of <a href="http://lustramag.com" title="Lustra Magazine">Lustra Magazine</a>, which aims to showcase and give a voice to the underdogs of the web industry. When Tim isn't chatting on Twitter, organizing his next project or generally just geeking out, he's just as happy to be watching the Lakers or sipping some coffee, like a dude.</p>
 

@@ -31,7 +31,7 @@
 
  
   <header>
-     <h1 class="logo"><a href="/"><img src="<?php bloginfo('template_url'); ?>/img/supersmith.svg" /></a></h1>
+     <a href="/" class="logo"><h1>Timothy B. Smith</h1></a>
       <nav>
         <a href="/about">About</a>
         <a href="/portfolio">Portfolio</a>
