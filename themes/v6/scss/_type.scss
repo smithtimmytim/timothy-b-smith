@@ -1,0 +1,46 @@
+@import "bits";
+
+@mixin sans {
+  font-family: "proxima-nova",sans-serif;
+}
+
+@mixin serif {
+  font-family: "ff-tisa-web-pro",serif;
+}
+
+@mixin iconfont {
+  font-family: "Pictos";
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include sans;
+}
+
+h3 {
+  color: $darkBlue;
+  font-weight: bold;
+  font-size: 1.6em;
+  margin-bottom: 02.34375%;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em, cite {
+  font-style: italic;
+}
+
+[data-icon]:before {
+  content: attr(data-icon);
+  @include iconfont;
+  speak: none;
+}
+
+@font-face {
+  font-family: 'Pictos';
+  src: url(../img/fonts/pictos-web.eot);
+  src: local('☺'), url(../img/fonts/pictos-web.woff) format('woff'), url(../img/fonts/pictos-web.ttf) format('truetype'), url(../img/fonts/pictos-web.svg#webfontIyfZbseF) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
