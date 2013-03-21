@@ -1,36 +1,9 @@
 
-@media screen and (max-width: 1024px) {
-		.main-content {
-			min-height: 0;
-		}
-}
+@media screen and (max-width: 680px) {
 
-@media screen and (max-width: 845px) {
-
-		.entry, header, article, footer, .comments, .tax-head, .cta, .wp-pagenavi {
-			padding-left: 100px !important;
-			padding-right: 100px !important;
-		}
-}
-
-
-@media screen and (max-width: 768px) {
-	
-		.main-content {
-			width: 100%;
-			box-sizing: border-box;
-		}
-}
-
-@media screen and (max-width: 568px) {
-
-		p.twitter-follow-button {
-			float: none !important;
-		}
-
-		footer p {
-			display: block;
-		}
+	.contain {
+		padding: 0 20px;
+	}
 
 }
 
@@ -38,7 +11,7 @@
 
 .logo {
 		display: block;
-		max-width: 100px;		
+		max-width: 60px;		
 		margin: 0 auto !important;
 		float: none !important;
 	}
@@ -50,72 +23,28 @@
 		text-align: center;
 	}
 
+	body {
+		font-size: 100%;
+	}
+
 }
 
 @media screen and (max-width: 555px) {
-		
-	input#contactName, input#email {
-		width: 100%;
-		margin-right: 0;
-	}
-
-	input#contactName {
-		margin-bottom: 10px;
-	}
-
-	.entry, header, article, footer, .comments, .tax-head, .cta, .wp-pagenavi {
-			padding-left: 40px !important;
-			padding-right: 40px !important;
-		}
 	
 	.work-full {
 		display: none;
 	}
 
-	h2 {
-		font-size: 22px;
-		small {
-			font-size: 16px !important;
-			display: block;
-			margin-top: 5px;
-			&:before {
-				content: "" !important;
-				margin: 0 !important;
-			}
-		}
+	body {
+		font-size: 95%;
 	}
 
-	h2.statement {
-		font-size: 30px;
-	}
 
-	.format-link {
-		h2 {
-			font-size: 20px !important;
-		}
-	}
-	
-	h3 {
-		font-size: 20px;
-	}
 }
 
 
 @media screen and (max-width: 460px) {
 	
-	header {
-		width: 100%;
-	}	
-	
-	.entry, header, article, footer, .comments, .tax-head, .cta, .wp-pagenavi {
-			padding-left: 20px !important;
-			padding-right: 20px !important;
-		}
-
-	.entry, .wp-pagenavi{
-		padding-top: 20px;
-		padding-bottom: 20px;
-	}
 
 	hr {
 		max-width: 220px;
@@ -132,4 +61,22 @@
   }
 }
 	
+}
+
+@media screen and (max-width: 400px) {
+		
+		body {
+			font-size: 85%;
+		}
+
+
+}
+
+@media screen and (max-width: 320px) {
+		
+		body {
+			font-size: 80%;
+		}
+
+
 }

@@ -20,7 +20,7 @@ h3 {
   color: $darkBlue;
   font-weight: bold;
   font-size: 1.6em;
-  margin-bottom: 02.34375%;
+  margin: 03.125% 0 02.34375%;
 }
 
 strong {
@@ -29,6 +29,17 @@ strong {
 
 em, cite {
   font-style: italic;
+}
+
+blockquote {
+  border-left: 10px solid $darkBlue;
+  padding-left: 15px;
+  margin: 0 0 03.125%;
+  small {
+    display: block;
+    font-size: .80em;
+    margin: 02.34375% 0 0;
+  }
 }
 
 [data-icon]:before {

@@ -4,7 +4,11 @@
 
 
 h2 {
+  font-size: 2.2em;
+  line-height: 1.2;
+  margin: 3% 0;
   small {
+    font-size: .65em;
     color: $lightBlue;
     font-weight: normal;
     &:before {
@@ -25,10 +29,7 @@ h2 {
     display: inline-block;
     margin: 0 10px 0 0 !important;
     padding: 10px 10px 10px 0;
-    &:before {
-      content: "";
-      padding: 0;
-    }
+    font-size: .90em;
     &:last-child {
       margin: 0;
       border-right: none;
@@ -54,7 +55,6 @@ h2 {
 .work-full {
   max-width: 1700px;
   margin: 50px auto;
-
 }
 
 p.next-one {
@@ -63,25 +63,16 @@ p.next-one {
 }
 
 .cta {
-  background: $jazzColor;
-  padding: 30px 180px;
-  max-width: 900px;
+  background: white;
+  padding: 3%;
   margin: 0 auto;
+  @include border-radius(4px);
   p {
     margin: 0;
-    color: white;
+    color: $darkBlue;
     text-align: center;
-    text-shadow: 1px 2px 0 rgba(black, .2);
     font-weight: bold;
     font-size: 18px;
-  }
-  a {
-    color: #f7d072;
-    border-bottom: none;
-    &:hover {
-      color: white;
-      border-bottom: none;
-    }
   }
 }
 
@@ -90,9 +81,16 @@ footer {
   padding-top: 30px;
 }
 
+.entry, {
+  h2 {
+    font-size: 2.2em;
+    line-height: 1.2;
+    margin: 3% 0;
+  }
+}
 
-.entry {
-  &:first-child {
+.page-template-single-portfolio-php {
+  .content {
     border-top: none;
   }
 }

@@ -1,8 +1,9 @@
 <?php get_header() ?>
 
-  <div class="main-content">
+  <section role="main" class="main-content">
+    <div class="contain">
 
-    <h1 class="tax-head">Posts tagged &lsquo;<?php single_tag_title(); ?>&rsquo;</h1>
+    <h1 class="statement">Posts tagged &lsquo;<?php single_tag_title(); ?>&rsquo;</h1>
 
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>  
 
@@ -12,6 +13,7 @@
 
     <?php wp_pagenavi(); ?>
 
-  </div><!-- .main-content -->
+    </div><!-- end .contain -->
+  </section><!-- end .main-content -->
 
 <?php get_footer(); ?>
