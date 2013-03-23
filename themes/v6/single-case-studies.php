@@ -25,14 +25,13 @@
 
       <?php the_content(); ?>
 
-      <?php next_post_link('<p class="next-one">On to the next one! %link </p>'); ?>
+      <?php previous_post_link('<p class="next-one">On to the next one! %link </p>'); ?>
 
     </div><!-- end .content -->
 
       <div class="cta">  
         <p>Like what you see?<br><a href="/contact">Tell me more about your project</a>.</p>
       </div>
-
   </div><!-- end .contain -->
 </section><!-- end .main-content -->
 <?php get_footer() ?>
