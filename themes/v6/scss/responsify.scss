@@ -17,7 +17,7 @@
 	}
 
 	nav {
-		margin: 30px auto 0 !important;
+		margin: 20px auto 0 !important;
 		float: none !important;
 		overflow: hidden;
 		text-align: center;
@@ -57,6 +57,7 @@
     padding-right: 0;
   }
   &.right {
+  	margin-top: 20px;
     padding-left: 0;
   }
 }

@@ -37,7 +37,7 @@ Template Name: Portfolio Index
     <?php endwhile; ?>
 
     <div class="cta">  
-      <p>Like what you see? Start your next project with me. <a href="/contact">Let's talk</a>.</p>
+      <p>Like what you see?<br><a href="/contact">Tell me more about your project</a>.</p>
     </div>
 
   </div> <!-- end .contain -->

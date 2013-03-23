@@ -39,8 +39,32 @@ blockquote {
     display: block;
     font-size: .80em;
     margin: 02.34375% 0 0;
+    &:before {
+      content: "—";
+      color: lighten($darkBlue, 40%);
+    }
   }
 }
+
+ul, .show-notes {
+  list-style-type: square;
+  margin: 0 0 0 20px;
+  li {
+    padding: 01.25% 0;
+    &:last-child {
+      padding: 01.25% 0 0;
+    }
+  }
+}
+
+ol {
+  list-style-type: decimal;
+  margin: 0 0 0 25px;
+  li {
+    margin: 0 0 03.125%;
+  }
+}
+
 
 [data-icon]:before {
   content: attr(data-icon);

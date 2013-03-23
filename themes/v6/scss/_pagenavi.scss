@@ -5,12 +5,15 @@
   border-top: 1px solid lighten($darkBlue, 65%);
   padding: 8% 0;
   overflow: hidden;
+  text-align: center;
 }
 
 .wp-pagenavi a {
   background: $linkColor;
   border: none !important;
-  padding: 8px 10px !important;
+  display: inline-block;
+  padding: 8px 12px;
+  margin: 0 5px;
   font-weight: bold;
   color: white;
   @include transition(all .2s ease-in-out);
@@ -21,13 +24,17 @@
   }
 }
 
-.nextpostslink {
-  float: right;
+.current {
+  background: white;
+  color: $darkBlue;
+  padding: 8px 12px;
+  margin: 0 5px;
+  @include border-radius (4px);
+  border: none !important;
+  display: inline-block;
+  font-weight: bold;
 }
 
-.previouspostslink {
-  float: left;
-}
 
 
 .wp-pagenavi a:active {
