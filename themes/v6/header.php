@@ -11,7 +11,7 @@
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/global.css"/>
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/responsify.css"/>
 
-  <?php if (is_page_template("page-portfolio-index.php") or is_page_template("single-portfolio.php")) { ?>
+  <?php if (is_page_template("portfolio.php") or is_singular('case-studies')) { ?>
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/portfolio.css">
   <?php } ?>
 

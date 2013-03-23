@@ -111,8 +111,10 @@ hr {
   list-style-type: none;
   li {
     border-bottom: 1px solid lighten($darkBlue, 65%);
-    padding: 01.25% 0;
+    padding: 5px 0;
     color: lighten($darkBlue, 40%);
+    font-size: 1em;
+    line-height: 1;
     &:last-child {
       border-bottom: none;
     }
@@ -167,6 +169,7 @@ hr {
 }
 
 .icon-alone {
+  border-bottom: none !important;
   margin: 0 0 0 10px;
   font-size: .70em;
   vertical-align: middle;
@@ -208,7 +211,7 @@ hr {
 
 // Page Styles 
 
-.page, .error404 {
+.page, .error404, .single-case-studies {
   .content {
     border-top: 1px solid lighten($darkBlue, 65%);
     padding: 10% 0;

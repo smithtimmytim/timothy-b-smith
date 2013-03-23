@@ -8,7 +8,7 @@
   <?php the_content('Read More') ?>
 
   <ul class="meta_info">
-  <li><?php previous_post_link('%link', 'Prev');?> <?php next_post_link('%link', '&middot; Next'); ?></li>
+  <li><?php previous_post_link('%link &middot;', 'Previous'); ?> <?php next_post_link('%link', 'Next'); ?></li>
   <li><?php the_tags('#', ' #'); ?></li>
   </ul>
 

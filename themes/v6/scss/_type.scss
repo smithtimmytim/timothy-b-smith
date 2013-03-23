@@ -48,8 +48,10 @@ blockquote {
 
 ul, .show-notes {
   list-style-type: square;
-  margin: 0 0 0 20px;
+  margin: 0 0 03.125% 20px;
   li {
+    font-size: 1.18em;
+    line-height: 140%;
     padding: 01.25% 0;
     &:last-child {
       padding: 01.25% 0 0;
@@ -63,6 +65,13 @@ ol {
   li {
     margin: 0 0 03.125%;
   }
+}
+
+pre {
+  font-family: monospace;
+  background: #193449;
+  color: #e0e17a;
+  padding: 20px;
 }
 
 
