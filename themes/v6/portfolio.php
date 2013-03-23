@@ -9,8 +9,8 @@ Template Name: Portfolio Indexing
   <div class="contain"> 
 
     <div class="entry">     
-      <h2 class="statement">What Can I Do?</h2>
-      <p>I'm based in beautiful Saint Paul, Minnesota and I work with a variety of clients anywhere in the world. I specialize in Web and User Interface Design and I know HTML, CSS, SCSS, and WordPress.</p>
+      <h2 class="statement">What I Do</h2>
+      <p>I'm a Designer and Front-End Developer with extensive experience designing user interfaces and websites.</p>
     </div><!-- end .entry -->
 
 <?php 
