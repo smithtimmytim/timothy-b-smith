@@ -30,7 +30,7 @@
     </div><!-- end .content -->
 
       <div class="cta">  
-        <p>Like what you see?<br><a href="/contact">Tell me more about your project</a>.</p>
+        <p>Like what you see?<br><a href="/contact">Tell me about your project</a>.</p>
       </div>
   </div><!-- end .contain -->
 </section><!-- end .main-content -->
