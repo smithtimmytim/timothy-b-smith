@@ -79,5 +79,19 @@
 			font-size: 80%;
 		}
 
+		header {
+		  padding: 5% 0 7%;
+		}
+
+		footer {
+			small {
+				font-size: .90em;
+				margin: 0 0 4%;
+		    &:last-child {
+		      margin: 0;
+		    }
+			}
+		}
+
 
 }
