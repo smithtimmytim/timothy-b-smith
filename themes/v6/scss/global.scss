@@ -175,46 +175,38 @@ hr {
 }
 
 .dot-irecommendthis {
-  background: lighten($darkBlue, 55%);
-  color: white;
-  display: inline-block;
-  padding: 10px 15px;
-  @include border-radius(4px);
   position: relative;
+  display: inline-block;
   span {
     vertical-align: middle;
   }
-  &:hover {
-    background: lighten($darkBlue, 35%);
-    color: white;
-  }
   .dot-irecommendthis-count {
     background: lighten($darkBlue, 45%);
+    color: white;
     display: inline-block;
-    padding: 12px 17px;
-    position: absolute;
+    padding: 10px 17px;
     font-size: .85em;
-    top: 0;
-    left: 0;
-    bottom: 0;
+    float: left;
     @include border-radius(4px 0 0 4px);
   }
   .dot-irecommendthis-suffix {
-    margin-left: 37px;
+    background: lighten($darkBlue, 55%);
+    color: white;
+    display: inline-block;
+    padding: 10px 15px;
+    float: left;
+    @include border-radius(0 4px 4px 0);
+      &:hover {
+      background: lighten($darkBlue, 35%);
+      color: white;
+    }
   }
   &.active {
-    background: #74c167;
-    position: relative;
+    .dot-irecommendthis-suffix {
+      background: #74c167;
+    }
     .dot-irecommendthis-count {
       background: darken(#74c167, 10%);
-      display: inline-block;
-      padding: 12px 17px;
-      position: absolute;
-      font-size: .85em;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      @include border-radius(4px 0 0 4px);
     }
   }
 }
