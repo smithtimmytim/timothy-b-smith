@@ -11,3 +11,7 @@ $('a').each(function() {
        });
    }
 });
+
+$('.dot-irecommendthis').one('click', function() {
+  $(this).addClass('animated bounce');
+});
