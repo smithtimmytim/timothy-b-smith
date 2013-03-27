@@ -2,6 +2,15 @@
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
   "creatorBuild" : "8283",
   "files" : {
+    "\/about.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/about.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/scss\/_normalize.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -14,25 +23,16 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/content-video.php" : {
+    "\/img\/tim_680x510.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/content-video.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/js\/stuff.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/stuff.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 0,
-      "outputAbbreviatedPath" : "\/js\/stuff-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/img\/tim_680x510.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/tim_680x510.jpg",
+      "initialSize" : 120022,
+      "fileType" : 4096
     },
     "\/functions.php" : {
       "ignoreWasSetByUser" : 0,
@@ -52,16 +52,16 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/img\/tim_680x510.jpg" : {
+    "\/js\/stuff.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/tim_680x510.jpg",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/tim_680x510.jpg",
-      "initialSize" : 120022,
-      "fileType" : 4096
+      "inputAbbreviatedPath" : "\/js\/stuff.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 0,
+      "outputAbbreviatedPath" : "\/js\/stuff-ck.js",
+      "fileType" : 64
     },
     "\/img\/bg.png" : {
       "ignoreWasSetByUser" : 0,
@@ -95,6 +95,15 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/hellobar-solo\/hellobar.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/hellobar-solo\/hellobar.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
     "\/style.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -114,15 +123,6 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/hellobar-solo\/hellobar-ck.js",
       "fileType" : 64
-    },
-    "\/hellobar-solo\/hellobar.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/hellobar-solo\/hellobar.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
     },
     "\/hellobar-solo\/textures.png" : {
       "ignoreWasSetByUser" : 0,
@@ -241,12 +241,12 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/content.php" : {
+    "\/content-post-video.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/content.php",
+      "inputAbbreviatedPath" : "\/content-post-video.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -259,21 +259,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
+    "\/content.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/content.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/header.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/header.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/content-post-video.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/content-post-video.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -403,12 +403,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/about.php" : {
+    "\/content-video.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/about.php",
+      "inputAbbreviatedPath" : "\/content-video.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     }

@@ -85,7 +85,8 @@
 
 		.meta_info {
 			li {
-				&:nth-child(3) {
+				&.rcmd-btn {
+					display: block;
 					float: none;
 					margin: 15px 0 0;
 				}

@@ -79,7 +79,6 @@ pre {
   content: attr(data-icon);
   @include iconfont;
   speak: none;
-  vertical-align: middle;
 }
 
 @font-face {
