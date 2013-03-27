@@ -10,8 +10,9 @@
     <li><?php the_tags('#', ' #'); ?></li>
     </ul>
 
+    <div class="recommend-btn">
+      <?php if( function_exists('dot_irecommendthis') ) dot_irecommendthis(); ?>
+    </div><!-- end .recommend-btn -->
+
   </article> <!-- end .entry -->
 
-<div class="comments">
-  <?php comments_template(); ?>
-</div><!-- .comments -->

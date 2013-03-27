@@ -126,6 +126,50 @@ hr {
   padding: 10% 5%;
 }
 
+.recommend-btn {
+  text-align: center;
+  margin: 06.25% 0 0;
+}
+
+.dot-irecommendthis {
+  background: lighten($darkBlue, 60%);
+  color: white;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 10px 15px;
+  @include border-radius(4px);
+  span {
+    vertical-align: middle;
+  }
+  &:hover {
+    background: lighten($darkBlue, 40%);
+    color: white;
+  }
+  .dot-irecommendthis-count {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  &.active {
+    background: #74c167;
+    position: relative;
+    .dot-irecommendthis-count {
+      background: darken(#74c167, 10%);
+      display: inline-block;
+      padding: 12px 15px;
+      position: absolute;
+      font-size: .85em;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      @include border-radius(4px 0 0 4px);
+    }
+    .dot-irecommendthis-suffix {
+      margin-left: 35px;
+    }
+  }
+}
+
 
 // Format Standard 
 
