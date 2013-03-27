@@ -6,12 +6,14 @@
     <?php the_content('Read More') ?>
 
     <ul class="meta_info">
-    <li><?php previous_post_link('%link &middot;', 'Previous'); ?> <?php next_post_link('%link', 'Next'); ?></li>
+    <li class="previous-post"><?php previous_post_link('%link', '<span aria-hidden="true" data-icon="r"></span><span class="screen-reader-text">Previous Post</span>'); ?></li>
+    <li class="next-post"><?php next_post_link('%link', '<span aria-hidden="true" data-icon="l"></span><span class="screen-reader-text">Next Post</span>'); ?></li>
+    <li><?php if( function_exists('dot_irecommendthis') ) dot_irecommendthis(); ?></li>
     <li><?php the_tags('#', ' #'); ?></li>
     </ul>
 
     <div class="recommend-btn">
-      <?php if( function_exists('dot_irecommendthis') ) dot_irecommendthis(); ?>
+      
     </div><!-- end .recommend-btn -->
 
   </article> <!-- end .entry -->

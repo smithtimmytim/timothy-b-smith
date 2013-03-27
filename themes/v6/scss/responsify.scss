@@ -83,6 +83,15 @@
 		  padding: 5% 0 7%;
 		}
 
+		.meta_info {
+			li {
+				&:nth-child(3) {
+					float: none;
+					margin: 15px 0 0;
+				}
+			}
+		}
+
 		footer {
 			small {
 				font-size: .90em;
