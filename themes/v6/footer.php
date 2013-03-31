@@ -27,9 +27,6 @@
 
 </script>
 
-<script src="<?php bloginfo('template_url'); ?>/js/jquery.fitvids-ck.js"></script>
-<script src="<?php bloginfo('template_url'); ?>/js/stuff-ck.js"></script>
-
 <!--WP Generated Footer -->
 <?php wp_footer(); ?>
 <!--End WP Generated Footer -->
