@@ -29,6 +29,20 @@
 
 <body <?php body_class($class); ?>>
 
+  <?php if (get_field('freelance_availability', 'options')) : ?>
+    
+    <a href="/contact">
+    <div class="freelance-availability yes">
+      <div class="contain">
+        <p>I'm Currently Accepting Limited Freelance Work.</p>
+      </div>    
+    </div> <!-- .freelance-availability -->
+    </a>
+
+  <?php else : ?>
+
+  <?php endif; ?>
+
  
   <header>
     <div class="contain">

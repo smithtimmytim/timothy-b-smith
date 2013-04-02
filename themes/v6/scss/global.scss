@@ -19,6 +19,28 @@
   left: -9999px;
 }
 
+// Freelance Availability
+
+.freelance-availability {
+  padding: 20px 0;
+  margin: 0 0 10px;
+  text-align: center;
+  font-weight: bold;
+  &.yes {
+    background: lighten($darkBlue, 65%);
+    color: $darkBlue;
+    @include transition(background .2s ease-in-out);
+    &:hover {
+      background: #71c262;
+      box-shadow: inset 0 -5px 0px rgba(black, .1);
+      color: white;
+    }
+  }
+  &.no {
+    background: #d34430;
+  }
+}
+
 // Home Page Styles
 
 a {

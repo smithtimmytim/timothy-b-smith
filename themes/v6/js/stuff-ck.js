@@ -1,1 +1,1 @@
-jQuery(function(e){e(".main-content, .content, .video-pusher").fitVids();e("a").each(function(){var t=new RegExp("/"+window.location.host+"/");t.test(this.href)||e(this).click(function(e){e.preventDefault();e.stopPropagation();window.open(this.href,"_blank")})});e(".dot-irecommendthis").one("click",function(){e(this).addClass("animated bounce")})});
+jQuery(function(e){e(".main-content, .content, .video-pusher").fitVids();e(".main-content a[href^='http://']").attr("target","_blank");e(".dot-irecommendthis").one("click",function(){e(this).addClass("animated bounce")})});
