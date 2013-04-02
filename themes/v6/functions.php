@@ -46,7 +46,7 @@ add_filter('the_content', 'filter_ptags_on_images');
 add_theme_support ('post-thumbnails');
 add_image_size('portfolio-thumb', 640, 9999);
 
-// Registering Option Page
-register_options_page('Hiring');
+// // Registering Option Page
+// register_options_page('Hiring');
 
 ?>
