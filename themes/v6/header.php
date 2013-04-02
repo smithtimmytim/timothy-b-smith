@@ -5,6 +5,8 @@
   <title><?php is_home() ? bloginfo('description') : wp_title(''); ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <link rel="shortcut icon" href="/favicon.ico">
+
   <link rel="author" href="https://plus.google.com/117161754644004218749/posts">
 	
 	<!-- My styles -->
