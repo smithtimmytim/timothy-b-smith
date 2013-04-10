@@ -39,7 +39,7 @@ define( 'MARKDOWNEXTRA_VERSION',  "1.2.6" ); # Sun 13 Jan 2013
 
 # Class attribute for code blocks goes on the `code` tag;
 # setting this to true will put attributes on the `pre` tag instead.
-@define( 'MARKDOWN_CODE_ATTR_ON_PRE',   false );
+@define( 'MARKDOWN_CODE_ATTR_ON_PRE',   true );
 
 
 #

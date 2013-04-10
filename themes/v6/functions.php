@@ -49,4 +49,6 @@ add_image_size('portfolio-thumb', 640, 9999);
 // Registering Option Page
 register_options_page('Hiring');
 
+remove_filter('the_content', 'wptexturize');
+
 ?>

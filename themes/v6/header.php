@@ -21,6 +21,9 @@
   <script type="text/javascript" src="//use.typekit.net/mev1xgw.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/prettify.css"/>
+
 
   <!--WP Generated Header -->
   <?php wp_head(); ?>
