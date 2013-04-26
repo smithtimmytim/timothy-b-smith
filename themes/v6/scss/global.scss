@@ -262,6 +262,65 @@ hr {
   }
 }
 
+.post-helpers a:after {
+  content: ",";
+  color: $darkBlue;
+  cursor: text;
+  font-weight: normal;
+}
+
+.post-helpers a:last-child:after {
+  content: "";
+}
+
+.post-helpers small {
+  line-height: 135%;
+}
+
+
+.post-thanks {
+  position: relative;
+  font-size: 1em;
+}
+
+.post-thanks:hover {
+  cursor: help;
+  border-bottom: 2px dotted lighten($darkBlue, 65%);
+}
+
+.post-thanks[data-tooltip]:before {
+  content: "";  
+  position: absolute;  
+  border-top: 10px solid rgba($darkBlue, .9);  
+  border-left: 0 solid transparent;  
+  border-right: 10px solid transparent;  
+  visibility: hidden;  
+  top: -10px;  
+  left: 25px; 
+}
+
+.post-thanks[data-tooltip]:after {
+  background: rgba($darkBlue, .9);
+  border-radius: 3px 3px 3px 0;
+  content: attr(data-tooltip);
+  padding: 8px 12px;
+  color: white;
+  position: absolute;
+  top: -50px;
+  left: 20px;
+  font-size: .85em;
+  font-weight: normal;
+  white-space: nowrap; 
+  z-index: 20px;
+  visibility: hidden;
+}
+
+.post-thanks[data-tooltip]:hover:before, .post-thanks[data-tooltip]:hover:after {  
+  visibility: visible;  
+}
+
+
+
 // Format Link
 
 .format-link {

@@ -26,6 +26,18 @@
 	body {
 		font-size: 100%;
 	}
+	
+	.post-helpers small {
+		display: block;
+		margin: 0 0 1.125%;
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	.post-thanks[data-tooltip]:before {
+		top: -13px;
+	}
 
 }
 
@@ -37,6 +49,10 @@
 
 	body {
 		font-size: 95%;
+	}
+
+	.post-thanks[data-tooltip]:before {
+		top: -14px;
 	}
 
 
@@ -69,6 +85,10 @@
 		body {
 			font-size: 85%;
 		}
+
+		.post-thanks[data-tooltip]:before {
+		top: -16px;
+	}
 
 
 }
