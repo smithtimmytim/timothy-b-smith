@@ -17,6 +17,7 @@
       <?php endwhile; ?>
       </small>
     </div><!-- end .post-helpers -->
+    <?php endif; ?>
     
   </article><!-- .entry -->
 </div>
