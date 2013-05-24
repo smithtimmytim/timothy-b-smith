@@ -22,22 +22,19 @@
 // Freelance Availability
 
 .freelance-availability {
-  padding: 20px 0;
+  padding: 15px 0;
   margin: 0 0 10px;
   text-align: center;
   font-weight: 800;
   &.yes {
-    background: lighten($darkBlue, 65%);
-    color: $darkBlue;
-    @include transition(background .2s ease-in-out);
-    &:hover {
-      background: #71c262;
-      box-shadow: inset 0 -5px 0px rgba(black, .1);
-      color: white;
-    }
+    background: $darkBlue;
+    color: white;
   }
-  &.no {
-    background: #d34430;
+}
+
+.page-template-contact-php {
+  .freelance-availability {
+    display: none;
   }
 }
 
