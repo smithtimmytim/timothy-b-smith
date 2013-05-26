@@ -458,7 +458,7 @@ img {
 
 .ginput_container {
   input {
-    color: $darkBlue;
+    color: lighten($darkBlue, 50%);
     background: lighten($darkBlue, 5%);
     @include border-radius(2px);
     padding: 10px;
@@ -470,6 +470,7 @@ img {
   }
   textarea{
     background: lighten($darkBlue, 5%);
+    color: lighten($darkBlue, 50%);
     @include border-radius(2px);
     padding: 10px;
     width: 100%;
