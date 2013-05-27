@@ -5,5 +5,13 @@
 
     <?php the_content('Read More') ?>
 
+    <?php if (get_field('show_like_button')) : ?>
+      <div class="post-footer">
+        <small class="rcmd-btn"><?php if( function_exists('dot_irecommendthis') ) dot_irecommendthis(); ?></small>
+      </div>
+    <?php else : ?>
+
+    <?php endif; ?>
+
   </article> <!-- end .entry -->
 
