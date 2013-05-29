@@ -4,6 +4,7 @@
 	<meta charset="utf-8" />
   <title><?php is_home() ? bloginfo('description') : wp_title(''); ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url'); ?>" />
 
   <link rel="shortcut icon" href="/favicon.ico">
 
