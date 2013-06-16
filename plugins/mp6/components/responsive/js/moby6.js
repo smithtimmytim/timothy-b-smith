@@ -59,6 +59,9 @@
 			clearTimeout( this.resizeTimeout );
 			this.resizeTimeout = setTimeout( function() {
 
+				if ( ! window.matchMedia )
+					return;
+
 				if ( window.matchMedia( '(max-width: 782px)' ).matches ) {
 					if ( moby6.$html.hasClass( 'touch' ) )
 						return;
@@ -149,7 +152,8 @@
 		},
 
 		removeHamburgerButton: function() {
-			this.hamburgerButtonView.destroy();
+			if ( this.hamburgerButtonView !== undefined )
+				this.hamburgerButtonView.destroy();
 		},
 
 		movePostSearch: function() {

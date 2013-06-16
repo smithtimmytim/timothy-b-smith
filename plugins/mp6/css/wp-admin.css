@@ -2030,7 +2030,7 @@ ul#adminmenu > li.current > a.current:after {
 	display: none;
 }
 
-#collapse-menu {
+#adminmenu #collapse-menu {
 	font-size: 13px;
 	line-height: 34px;
 	margin-top: 10px;
@@ -4961,10 +4961,7 @@ span.description,
 }
 
 p.popular-tags {
-	-webkit-border-radius: 8px;
-	border-radius: 8px;
-	border-width: 1px;
-	border-style: solid;
+	border: none;
 	line-height: 2em;
 	max-width: 1000px;
 	padding: 8px 12px 12px;
@@ -6349,10 +6346,6 @@ h2 .nav-tab {
 	font-size: 22px;
 }
 
-#your-profile #rich_editing {
-	border: none;
-}
-
 #display_name {
 	width: 15em;
 }
@@ -6907,7 +6900,6 @@ body.full-overlay-active {
 	bottom: 0;
 	right: 0;
 	width: 3px;
-	box-shadow: -5px 0 4px -4px rgba(0, 0, 0, 0.1) inset;
 	z-index: 1000;
 }
 
@@ -6933,7 +6925,6 @@ body.full-overlay-active {
 
 .wp-full-overlay-sidebar .wp-full-overlay-header {
 	border-top: 0;
-	border-bottom: 1px solid #fff;
 	box-shadow: inset 0 -1px 0 0px #dfdfdf;
 }
 
@@ -6951,10 +6942,6 @@ body.full-overlay-active {
 	left: 0;
 	right: 0;
 	overflow: auto;
-}
-
-.wp-full-overlay-sidebar-content .accordion-section:first-child {
-	border-top: 1px solid #fff;
 }
 
 /* Close Link */
@@ -7217,6 +7204,9 @@ table.form-table td .updated {
 	margin-left: 14px;
 	font-size: 12px;
 	overflow: auto;
+}
+.tagchecklist br {
+	display: none;
 }
 .tagchecklist strong {
 	margin-left: -8px;
@@ -7952,7 +7942,8 @@ a.rsswidget {
 
 /* login */
 
-#loginform p.submit {
+#loginform p.submit,
+.login-action-lostpassword p.submit {
 	border: none;
 	margin: -10px 0 20px; /* May want to revisit this */
 }
@@ -9253,7 +9244,7 @@ h3.tb {
 	text-decoration: none !important;
 }
 
-.js .postbox.closed:hover .sidebar-name-arrow:before,
+.js .widgets-holder-wrap.closed:hover .sidebar-name-arrow:before,
 .js .meta-box-sortables .postbox.closed:hover .handlediv:before {
 	content: '\f140';
 }
@@ -9630,7 +9621,8 @@ div.sidebar-name {
 }
 
 .js .closed .widgets-sortables,
-.js .closed .widget-holder {
+.js .closed .widget-holder,
+.js .closed br.clear {
 	display: none;
 }
 
@@ -9949,17 +9941,8 @@ a.widget-control-edit {
 /* Accordion */
 
 .accordion-section {
-	border-top: 1px solid #fff;
 	border-bottom: 1px solid #dfdfdf;
 	margin: 0;
-}
-
-.accordion-section:first-child {
-	border-top: 1px solid #dfdfdf;
-}
-
-.accordion-section:last-child {
-	box-shadow: 0 1px 0 0px #fff;
 }
 
 .accordion-section.open .accordion-section-content,
@@ -10027,7 +10010,7 @@ a.widget-control-edit {
 .control-section .accordion-section-title {
 	border-left: none;
 	border-right: none;
-	border-bottom: none;
+	border-bottom: none !important;
 	padding: 10px 10px 10px 14px;
 	font-size: 15px;
 	font-family: "Open Sans", sans-serif;
@@ -10062,7 +10045,7 @@ a.widget-control-edit {
 
 .control-section.accordion-section:hover,
 .control-section.accordion-section.open {
-	border-top-color: #808080;
+	border-top-bottom: #808080;
 }
 
 .control-section.open .accordion-section-title {

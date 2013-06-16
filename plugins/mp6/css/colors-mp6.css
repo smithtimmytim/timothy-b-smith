@@ -342,7 +342,6 @@ h3.dashboard-widget-title small,
 .menu-item-handle,
 .checkbox,
 .side-info,
-#your-profile #rich_editing,
 .widefat thead th,
 .widefat tfoot th {
 	background: #fcfcfc;
@@ -350,6 +349,7 @@ h3.dashboard-widget-title small,
 	border-bottom: 1px solid #e1e1e1;
 }
 
+.accordion-section .accordion-section-title,
 .accordion-section.open .accordion-section-content {
 	border-left: none;
 	border-right: none;
@@ -363,17 +363,9 @@ h3.dashboard-widget-title small,
 	border-color: #0074a2 !important;
 }
 
-.accordion-container ul li.accordion-section:last-child {
-	border-bottom: none;
-}
-
 .widefat tfoot th {
 	border-bottom: none;
 	border-top: 1px solid #e1e1e1;
-}
-
-.plugins tfoot th {
-	border-top: none !important;
 }
 
 .form-table th,
@@ -723,7 +715,7 @@ a,
 }
 
 #adminmenu a {
-	color: #ddd;
+	color: #eee;
 	-moz-transition: all .1s ease-in-out;
 	-webkit-transition: all .1s ease-in-out;
 	transition: all .1s ease-in-out;
@@ -847,7 +839,8 @@ tr.active + tr.plugin-update-tr .plugin-update .update-message {
 .plugins .inactive td,
 .plugins .inactive th,
 .plugins .active td,
-.plugins .active th {
+.plugins .active th,
+.plugin-install #the-list td {
 	-webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,0.1);
 	box-shadow: inset 0 -1px 0 rgba(0,0,0,0.1);
 }
@@ -901,12 +894,12 @@ a.post-format-icon:hover:before {
 	color: #2ea2cc;
 }
 
-
 #the-list tr:last-child td,
 #the-list tr:last-child th {
 	border-bottom: none !important;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 }
-
 
 #the-comment-list tr.undo,
 #the-comment-list div.undo {
@@ -946,7 +939,6 @@ a.post-format-icon:hover:before {
 #widget-list .widget-top,
 .postbox,
 #menu-management .menu-edit,
-.accordion-container,
 .manage-menus,
 table.widefat,
 .stuffbox,
@@ -1175,7 +1167,7 @@ table.widefat .spam a:hover,
 /* menu */
 #adminmenuback,
 #adminmenuwrap {
-	background-color: #262626;
+	background-color: #222;
 }
 
 #adminmenu li.wp-menu-separator {
@@ -2104,15 +2096,17 @@ body.login {
 	border-right: 4px solid #7ad03a;
 }
 
+.rtl .plugins .active th.check-column,
 .rtl tr.active + tr.plugin-update-tr .plugin-update {
 	border-left: none;
 	border-right: 4px solid #2ea2cc;
 }
-
-.rtl .plugins .active th.check-column {
+.rtl .plugins .update th.check-column,
+.rtl tr.plugin-update-tr .plugin-update {
 	border-left: none;
-	border-right: 4px solid #2ea2cc;
+	border-right: 4px solid #d54e21;
 }
+
 
 /* To be merged */
 

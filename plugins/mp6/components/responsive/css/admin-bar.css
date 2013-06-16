@@ -152,6 +152,10 @@ html #wpadminbar {
 	margin-right: -156px;
 }
 
+.multisite #wpadminbar #wp-admin-bar-my-account {
+	margin-right: 0;
+}
+
 /**
  * RTL
  * ----------------------------------------------------------------------------

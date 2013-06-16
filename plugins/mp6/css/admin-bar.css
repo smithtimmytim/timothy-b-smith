@@ -10,7 +10,7 @@
 	letter-spacing: normal;
 	line-height: 1;
 	font: normal 13px/32px "Open Sans", sans-serif;
-	color: #ddd;
+	color: #eee;
 	text-shadow: #444 0px -1px 0px;
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing:    content-box;
@@ -602,7 +602,7 @@
 ------------------------------------------------------------------------------*/
 
 #wpadminbar {
-	background: #262626 !important;
+	background: #222 !important;
 }
 
 #wpadminbar * {

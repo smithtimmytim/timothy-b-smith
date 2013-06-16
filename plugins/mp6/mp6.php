@@ -3,7 +3,7 @@
 Plugin Name: MP6
 Plugin URI: http://wordpress.org/extend/plugins/mp6/
 Description: This is a plugin to break the wp-admin UI, and is not recommended for non-savvy users.
-Version: 1.5
+Version: 1.6
 Author:
 Author URI: http://wordpress.org
 License: GPLv2 or later
@@ -80,6 +80,7 @@ function mp6_replace_admin_bar_style() {
 	$wp_styles->registered[ 'admin-bar' ]->ver = filemtime( plugin_dir_path( __FILE__ ) . 'css/admin-bar.css' );
 	$wp_styles->registered[ 'admin-bar' ]->deps[] = 'open-sans';
 	$wp_styles->registered[ 'admin-bar' ]->deps[] = 'dashicons';
+	$wp_styles->registered[ 'admin-bar' ]->extra[ 'suffix' ] = '';
 }
 
 // replace some default css files with ours
@@ -94,10 +95,12 @@ function mp6_replace_wp_default_styles() {
 	$wp_styles->registered[ 'media' ]->ver = filemtime( plugin_dir_path( __FILE__ ) . 'css/media.css' );
 	$wp_styles->registered[ 'media-views' ]->src = plugins_url( 'css/media-views.css', __FILE__ );
 	$wp_styles->registered[ 'media-views' ]->ver = filemtime( plugin_dir_path( __FILE__ ) . 'css/media-views.css' );
+	$wp_styles->registered[ 'media-views' ]->extra[ 'suffix' ] = '';
 	$wp_styles->registered[ 'wp-admin' ]->src = plugins_url( 'css/wp-admin.css', __FILE__ );
 	$wp_styles->registered[ 'wp-admin' ]->ver = filemtime( plugin_dir_path( __FILE__ ) . 'css/wp-admin.css' );
 	$wp_styles->registered[ 'wp-admin' ]->deps[] = 'open-sans';
 	$wp_styles->registered[ 'wp-admin' ]->deps[] = 'dashicons';
+	$wp_styles->registered[ 'wp-admin' ]->extra[ 'suffix' ] = '';
 	$wp_styles->registered[ 'wp-pointer' ]->src = plugins_url( 'css/wp-pointer.css', __FILE__ );
 	$wp_styles->registered[ 'wp-pointer' ]->ver = filemtime( plugin_dir_path( __FILE__ ) . 'css/wp-pointer.css' );
 }
@@ -118,6 +121,8 @@ function mp6_add_body_class_frontend( $classes ) {
 // Add an MP6 body class to the back-end
 add_filter( 'admin_body_class', 'mp6_add_body_class_backend' );
 function mp6_add_body_class_backend( $classes ) {
+	if ( is_multisite() )
+		$classes .= ' multisite';
 	return $classes . ' mp6';
 }
 
@@ -128,7 +133,7 @@ function mp6_override_toolbar_margin() {
 <style type="text/css" media="screen">
 	html { margin-top: 32px !important; }
 	* html body { margin-top: 32px !important; }
-	
+
 	@media screen and ( max-width: 782px ) {
 		html { margin-top: 46px !important; }
 		* html body { margin-top: 46px !important; }

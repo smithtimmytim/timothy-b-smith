@@ -1569,6 +1569,10 @@ h2 .nav-tab {
 	padding-left: 12px;
 }
 
+.plugin-update-tr .update-message:before {
+	margin: 0 -2px 0 8px;
+}
+
 
 /*------------------------------------------------------------------------------
   18.0 - Users
