@@ -36,9 +36,11 @@ body * {
  * Hidden Elements
  * ----------------------------------------------------------------------------
  */
-#screen-meta, #screen-meta-links, #collapse-menu,
+#screen-meta,
+#screen-meta-links,
+#collapse-menu,
 .post-format-select {
-	display: none;
+	display: none !important;
 }
 
 
@@ -53,6 +55,10 @@ input[type=text], input[type=search],
 input[type=password], input[type=number] {
 	-webkit-appearance: none;
 	padding: 6px 10px;
+}
+input.code {
+	padding-bottom: 5px;
+	padding-top: 10px;
 }
 input[type=checkbox], .widefat th input[type=checkbox] {
 	-webkit-appearance: none;
@@ -110,6 +116,16 @@ a.preview {
 	padding: 10px 15px;
 	font-size: 14px;
 }
+.wp-color-result {
+	height: auto;
+	padding-left: 45px;
+}
+.wp-color-result:after {
+	font-size: 14px;
+	height: auto;
+	padding: 6px 14px;
+}
+
 #createuser .form-field input {
 	width: 100%;
 }
@@ -444,8 +460,7 @@ ul#categorychecklist li {
 }
 
 /* Tags Metabox */
-.tagsdiv .newtag,
-.press-this .tagsdiv .newtag {
+.tagsdiv .newtag {
 	width: 100%;
 	padding: 25px 10px;
 	margin-bottom: 15px;
@@ -922,6 +937,7 @@ input[type="number"].small-text,
 body.nav-menus-php {
 	min-width: 0 !important;
 }
+
 #nav-menus-frame {
 	margin-left: 0;
 	float: none;
@@ -933,23 +949,30 @@ body.nav-menus-php {
 	float: none;
 	margin-left: 0;
 }
-.nav-menus-php .howto span {
-	margin-top: 14px;
-}
-#menu-management-liquid {
-	margin-top: 25px;
-}
-ul.add-menu-item-tabs {
-	margin: 30px 0 15px;
-}
-ul.add-menu-item-tabs li {
-	padding: 15px;
-}
 #side-sortables .add-menu-item-tabs {
-	margin-bottom: 15px;
+	margin: 15px 0;
+}
+ul.add-menu-item-tabs li.tabs {
+	padding: 15px;
 }
 .nav-menus-php .item-controls .item-type {
 	margin-top: 2px;
+}
+.nav-menus-php .customlinkdiv .howto input {
+	width: 65%;
+}
+.nav-menus-php .quick-search {
+	width: 85%;
+}
+
+#menu-management-liquid {
+	margin-top: 25px;
+}
+.nav-menus-php .menu-name-label.howto span {
+	margin-top: 13px
+}
+.menu-name-label #menu-name {
+	margin-top: 4px;
 }
 .nav-menus-php .major-publishing-actions .publishing-action {
 	margin-top: 6px;
@@ -959,6 +982,23 @@ ul.add-menu-item-tabs li {
 	line-height: 50px;
 	margin-top: 12px;
 }
+.menu-item-bar .menu-item-handle,
+.menu-item-settings,
+.description-wide {
+	width: auto;
+}
+.menu-item-settings {
+	padding: 10px;
+}
+.menu-item-settings .description-thin,
+.menu-item-settings .description-wide {
+	width: 100%;
+	height: auto;
+}
+.menu-item-settings input {
+	width: 100%;
+}
+
 
 
 /**
@@ -1193,15 +1233,6 @@ div#widgets-left, div#widgets-right {
 }
 
 /**
- * Press This
- * ----------------------------------------------------------------------------
- */
-
-.press-this #wp-content-media-buttons {
-	top: 10px;
-}
-
-/**
  * Moderate Comment
  * ----------------------------------------------------------------------------
  */
@@ -1236,7 +1267,8 @@ div#widgets-left, div#widgets-right {
  */
 .jetpack_page_akismet-key-config .wrap .narrow,
 .plugins_page_akismet-key-config  .wrap .narrow,
-#akismet-conf {
+#akismet-conf,
+#akismet-connectivity {
 	width: auto !important;
 }
 #comments-form .checkforspam {
@@ -1404,6 +1436,28 @@ div#widgets-left, div#widgets-right {
 	margin-left: auto;
 }
 
+} /* @media block */
 
+@media only screen and (max-width: 900px) {
+
+/**
+ * Jetpack CSS Editor
+ * ----------------------------------------------------------------------------
+ */
+
+#safecssform #postbox-container-1 {
+	width: 100%;
+}
+#safecssform .inner-sidebar #side-sortables,
+#safecssform .columns-2 .inner-sidebar #side-sortables {
+	min-height: 0;
+	width: 100%;
+}
+#safecssform .has-right-sidebar #post-body-content {
+	margin-right: 0;
+}
+#safecssform .has-right-sidebar #post-body {
+	margin-right: 0;
+}
 
 } /* @media block */

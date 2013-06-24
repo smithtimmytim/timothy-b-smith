@@ -380,6 +380,9 @@ h3.dashboard-widget-title small,
 .form-table td {
 	border-bottom: 1px solid #dfdfdf;
 }
+.form-table.editcomment td {
+	border-bottom: none;
+}
 
 .description,
 .form-wrap p {
@@ -1643,8 +1646,14 @@ div.widgets-sortables,
 	color: black;
 }
 
-.in-widget-title {
-	color: #78c8e6;
+.in-widget-title,
+#widgets-right .widget-top a.widget-control-edit {
+	color: #fff;
+	color: rgba(255,255,255,0.7);
+}
+
+#widgets-right .widget-top a.widget-control-edit:hover {
+	color: #fff;
 }
 
 #wp_inactive_widgets .in-widget-title {
@@ -1774,9 +1783,7 @@ div.widgets-sortables,
 	color: #fff;
 }
 
-.menu-item-settings { /* Menu editing */
-	border-color: #dfdfdf;
-}
+/* Menu editing */
 
 .link-to-original {
 	color: #777;
