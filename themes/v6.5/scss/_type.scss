@@ -33,8 +33,9 @@ em, cite {
 }
 
 blockquote {
-  border-left: 15px solid $linkColor;
-  padding-left: 15px;
+  border-left: 10px solid $linkColor;
+  color: lighten($darkBlue, 35%);
+  padding-left: 20px;
   margin: 0 0 03.125%;
   small {
     display: block;
