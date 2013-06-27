@@ -1,0 +1,37 @@
+@import "compass/css3";
+@import "bits";
+
+.wp-pagenavi {
+  overflow: hidden;
+  text-align: center;
+  margin: 0 0 8%;
+}
+
+.wp-pagenavi a {
+  background: $jazzColor;
+  border: none !important;
+  display: inline-block;
+  padding: 5px 14px;
+  margin: 0 5px;
+  font-weight: bold;
+  color: white;
+  @include border-radius (4px);
+  &:hover {
+    background: darken($jazzColor, 10%);
+    color: white;
+  }
+  &:active {
+    box-shadow: inset 2px 2px 0 rgba(black, .2);
+  }
+}
+
+.current {
+  background: $borderColor;
+  color: $darkColor;
+  padding: 5px 14px;
+  margin: 0 5px;
+  @include border-radius (4px);
+  border: none !important;
+  display: inline-block;
+  font-weight: bold;
+}

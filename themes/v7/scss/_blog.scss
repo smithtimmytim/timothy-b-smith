@@ -1,0 +1,229 @@
+.main-content {
+  p {
+    font-size: 1.1em;
+    line-height: 155%;
+    margin: 0 0 3.125% 10%;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  h2 {
+    margin: 0 0 3% 10%;
+    line-height: 125%;
+  }
+  h3 {
+    color: lighten($darkColor, 10%);
+    margin: 5% 0 2% 10%;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  img {
+    margin: 3.125% 0;
+  }
+}
+
+.entry {
+  border-bottom: 1px solid $borderColor;
+  padding: 4.5% 0;
+}
+
+p.pubdate {
+  color: lighten($darkColor, 40%);
+  font-size: .85em;
+  font-weight: bold;
+  margin: 0 0 4% 10%;
+}
+
+hr {
+  border: solid $borderColor;
+  border-width: 5px 0 0;
+  clear: both;
+  margin: 35px auto;
+  height: 0;
+  width: auto;
+  max-width: 350px;
+  display: block;
+  padding: 0;
+}
+
+.footnotes {
+  li {
+    line-height: 150%;
+  }
+}
+
+.post-footer {
+  margin: 6.25% 0 0 10%;
+}
+
+.dot-irecommendthis {
+  position: relative;
+  display: inline-block;
+  border-bottom: none;
+  &:hover {
+    border-bottom: none;
+  }
+  span {
+    vertical-align: middle;
+  }
+  .dot-irecommendthis-count {
+    background: darken($jazzColor, 5%);
+    color: white;
+    display: inline-block;
+    padding: 10px 17px;
+    font-size: .80em;
+    font-weight: bold;
+    float: left;
+    @include border-radius(4px 0 0 4px);
+  }
+  .dot-irecommendthis-suffix {
+    background: lighten($jazzColor, 5%);
+    color: white;
+    display: inline-block;
+    padding: 10px 15px;
+    float: left;
+    font-size: .90em;
+    font-weight: bold;
+    @include border-radius(0 4px 4px 0);
+    @include transition(all .2s ease-in-out);
+      &:hover {
+      background: lighten($jazzColor, 10%);
+      color: white;
+    }
+  }
+  &.active {
+    .dot-irecommendthis-suffix {
+      background: $linkColor;
+    }
+    .dot-irecommendthis-count {
+      background: darken($linkColor, 10%);
+    }
+  }
+}
+
+// Format Standard 
+
+.format-standard {
+  h2 {
+    font-size: 2em;
+    font-weight: 800;
+    a {
+      border-bottom: none;
+      color: $darkColor;
+      font-weight: 800;
+      &:hover {
+        color: $linkColor;
+        border-bottom: none;
+      }
+    }
+  }
+  p:nth-child(3) {
+    font-size: 1.3em;
+  }
+}
+
+.post-helpers {
+  margin: 0 0 1px 10%;
+  overflow: visible;
+}
+
+.post-helpers a:after {
+  content: ",";
+  color: $darkColor;
+  cursor: text;
+  font-weight: normal;
+}
+
+.post-helpers a:last-child:after {
+  content: "";
+}
+
+.post-helpers small {
+  line-height: 135%;
+}
+
+
+.post-thanks {
+  position: relative;
+  font-size: 1em;
+}
+
+.post-thanks:hover {
+  cursor: help;
+  border-bottom: 2px dotted $borderColor;
+}
+
+.post-thanks[data-tooltip]:before {
+  content: "";  
+  position: absolute;  
+  border-top: 10px solid lighten($darkColor, 25%);  
+  border-left: 0 solid transparent;  
+  border-right: 10px solid transparent;  
+  visibility: hidden;  
+  top: -10px;  
+  left: 25px; 
+}
+
+.post-thanks[data-tooltip]:after {
+  background: lighten($darkColor, 25%);
+  border-radius: 3px 3px 3px 0;
+  content: attr(data-tooltip);
+  padding: 8px 12px;
+  color: white;
+  position: absolute;
+  top: -50px;
+  left: 20px;
+  font-size: .85em;
+  font-weight: normal;
+  white-space: nowrap; 
+  z-index: 20px;
+  visibility: hidden;
+}
+
+.post-thanks[data-tooltip]:hover:before, .post-thanks[data-tooltip]:hover:after {  
+  visibility: visible;  
+}
+
+
+// Format Link
+.format-link {
+  h2 {
+    font-size: 1.3em;
+    font-weight: bold;
+    line-height: 140%;
+  }
+  span {
+    vertical-align: middle;
+  }
+}
+
+.icon-alone {
+  border-bottom: none !important;
+  margin: 0 0 0 10px;
+  font-size: .85em;
+  font-weight: normal !important;
+  vertical-align: middle;
+  color: lighten($darkColor, 40%) !important;
+  &:hover {
+    color: $linkColor !important;
+  }
+}
+
+// Format Video
+
+.format-video {
+  h2 {
+    font-size: 2em;
+    font-weight: 800;
+    margin: 3% 0 3% 10%;
+    a {
+      border-bottom: none;
+      color: $darkColor;
+      font-weight: 800;
+      &:hover {
+        color: $linkColor;
+        border-bottom: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+
+//Portfolio Styles
+
+.projects {
+  .entry {
+    &:last-child {
+      margin-bottom: 0;
+      background: red;
+    }
+  }
+  h2 {
+    font-size: 2em;
+    font-weight: 800;
+  }
+}
+
+.cta {
+  background: $jazzColor;
+  padding: 3% 0;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  a {
+    color: darken($jazzColor, 40%);
+    border-bottom: none;
+    &:hover {
+      color: darken($jazzColor, 30%);
+    }
+  }
+}

@@ -1,0 +1,54 @@
+
+// About Page Styles
+
+.content {
+  margin: 0 0 5%;
+}
+
+.published {
+  list-style-type: none;
+  margin: 0;
+  li {
+    border-bottom: 1px solid $borderColor;
+    padding: 4% 0;
+    line-height: 130%;
+    @include transition(background .2s ease-in-out);
+    &:hover {
+      background: lighten($borderColor, 5%);
+    }
+    &:last-child {
+      border-bottom: none;
+      padding: 4% 0 0;
+    }
+    a {
+      color: $jazzColor;
+      display: block;
+      border-bottom: none;
+      font-size: .95em;
+      &:hover {
+        color: darken($jazzColor, 20%);
+      }
+      small {
+        color: lighten($darkColor, 40%);
+        display: block;
+        font-size: .8em;
+      }
+    }
+  }
+}
+
+.half-col {
+  width: 45%;
+  float: left;
+  overflow: hidden;
+  h3 {
+    margin: 5% 0 2% 0;
+  }
+  &.left {
+    margin: 0 0 0 10%;
+    padding-right: 02.34375%;
+  }
+  &.right {
+    padding-left: 02.34375%;
+  }
+}

@@ -1,0 +1,1 @@
+jQuery(function(e){e(".main-content, .content, .video-pusher").fitVids();e('.main-content a:not([href^="http://ttimsmith.com"]):not([href^="#"]):not([href^="/"]):not([href^="http://dev.ttimsmith:8888/"]) ').attr("target","_blank");e(".dot-irecommendthis").one("click",function(){e(this).addClass("animated bounce")})});
