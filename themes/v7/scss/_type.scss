@@ -69,6 +69,9 @@ blockquote {
 ul, .show-notes {
   list-style-type: square;
   margin: 0 0 03.125% 10%;
+  @media screen and (max-width: 700px ) {
+    margin: 0 0 0 20px; 
+  } 
   li {
     font-size: 1.1em;
     line-height: 160%;
@@ -83,6 +86,9 @@ ol {
   list-style-type: decimal;
   margin: 0 0 0 10%;
   text-align: left;
+  @media screen and (max-width: 700px ) {
+    margin: 0 0 0 20px; 
+  } 
   li {
     margin: 0 0 03.125%;
     p {
