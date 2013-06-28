@@ -21,6 +21,15 @@ body {
   @include sans-type;
   font-size: 120%;
   line-height: 140%;
+  @media screen and (max-width: 990px ) {
+    font-size: 105%;
+  }
+  @media screen and (max-width: 500px ) {
+    font-size: 90%;
+  }
+  @media screen and (max-width: 340px ) {
+    font-size: 83%;
+  }
 }
 
 strong {

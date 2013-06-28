@@ -18,8 +18,14 @@
 // Reusable Classes
 
 .contain {
-  width: 620px;
+  max-width: 620px;
   overflow: hidden;
+  @media screen and (max-width: 800px ) {
+    margin-right: 10%;
+  }
+  @media screen and (max-width: 700px ) {
+    margin: 0 5%;
+  }
 }
 
 .screen-reader-text {
@@ -30,6 +36,9 @@
 
 .right-column {
   margin: 0 0 0 25%;
+  @media screen and (max-width: 700px ) {
+    margin: 0;
+  }
 }
 
 // Global Stuff
@@ -39,6 +48,36 @@ a {
   border-bottom: 1px solid darken($borderColor, 10%);
   &:hover {
     border-bottom: 1px solid $linkColor;
+  }
+}
+
+.main-content {
+  margin: 5% 0 0;
+  p {
+    font-size: 1.1em;
+    line-height: 155%;
+    margin: 0 0 3.125% 10%;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  h2 {
+    margin: 0 0 3.5% 10%;
+    line-height: 125%;
+  }
+  h3 {
+    color: lighten($darkColor, 10%);
+    margin: 5% 0 2% 10%;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  img {
+    margin: 3.125% 0;
+  }
+  @media screen and (max-width: 700px ) {
+    p, h2, h3, p.pubdate, blockquote, .post-helpers {
+      margin-left: 0;
+    }
   }
 }
 
@@ -53,6 +92,9 @@ a {
 
 //Portfolio Page Styles
 @import "portfolio";
+
+//Contact Page Styles
+@import "contact-page";
 
 // Footer Styles
 @import "footer";

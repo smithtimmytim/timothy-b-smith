@@ -41,14 +41,30 @@
   width: 45%;
   float: left;
   overflow: hidden;
+  @media screen and (max-width: 700px ) {
+    width: 50%;
+  }
+  @media screen and (max-width: 450px ) {
+    width: 100%;
+    float: none;
+  }
   h3 {
     margin: 5% 0 2% 0;
   }
   &.left {
     margin: 0 0 0 10%;
     padding-right: 02.34375%;
+    @media screen and (max-width: 700px ) {
+      margin: 0;
+    }
+    @media screen and (max-width: 450px ) {
+      padding-right: 0;
+    }
   }
   &.right {
     padding-left: 02.34375%;
+    @media screen and (max-width: 450px ) {
+      padding-left: 0;
+    }
   }
 }

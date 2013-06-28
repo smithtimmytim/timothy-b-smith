@@ -38,7 +38,7 @@
   <header class="sidebar">
     <div class="logo-box">
       <a href="/" class="logo"></a>
-      <h1>Tim Smith</h1>
+      <h1><a href="/">Tim Smith</a></h1>
       <h2>Designer. Broadcaster. Host of <a target="_blank" href="http://theeastwing.net">The East Wing</a>. Coffee addict.</h2>
     </div><!-- .logo-box -->
 
@@ -46,12 +46,9 @@
       <a href="/about">About</a>
       <a href="/portfolio">Portfolio</a>
       <a href="/contact">Contact</a>
-      <a href="https://twitter.com/ttimsmith">@ttimsmith</a>
+      <a target="_blank" href="https://twitter.com/ttimsmith">@ttimsmith</a>
     </nav>
 
-    <div class="search-form">
-      <?php get_search_form(); ?>
-    </div><!-- .search-form --> 
   </header><!-- header -->
 
 
