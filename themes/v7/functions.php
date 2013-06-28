@@ -13,7 +13,7 @@
 // 'rewrite' => array('slug' => 'portfolio', 'with_front' => ''),
 // 'query_var' => 'true',
 // 'exclude_from_search' => 'false',
-// 'supports' => array(''title','editor','excerpt','trackbacks','custom-fields','comments','revisions','thumbnail','author','page-attributes','),
+// 'supports' => array('title','editor','excerpt','trackbacks','custom-fields','comments','revisions','thumbnail','author','page-attributes' ),
 // 'labels' => 'array (
 //   'name' => 'Case Studies',
 //   'singular_name' => 'Case Study',
@@ -34,23 +34,38 @@
 
 // Adding Custom Post Type - Case Studies
 
-add_action( 'init', 'create_post_type' );
+add_action( 'init', 'create_post_type');
 function create_post_type() {
   register_post_type( 'case-studies',
     array(
       'labels' => array(
-        'name' => __( 'Case Studies' ),
-        'singular_name' => __( 'Case Study' )
+        'name' => 'Case Studies',
+        'singular_name' => 'Case Study',
+        'menu_name' => 'Case Studies',
+        'add_new' => 'Add Case Study',
+        'add_new_item' => 'Add New Case Study',
+        'edit' => 'Edit',
+        'edit_item' => 'Edit Case Study',
+        'new_item' => 'New Case Study',
+        'view' => 'View Case Study',
+        'view_item' => 'View Case Study',
+        'search_items' => 'Search Case Studies',
+        'not_found' => 'No Case Studies Found',
+        'not_found_in_trash' => 'No Case Studies Found in Trash',
+        'parent' => 'Parent Case Study',
       ),
-    'public' => 'true',
-    'show_ui' => 'true',
-    'show_in_menu' => 'true',
+    'public' => true,
+    'show_ui' => true,
+    'show_in_menu' => true,
+    'show_in_nav_menus' => true,
+    'show_in_admin_bar' => true,
+    'menu_position' => 5,
     'capability_type' => 'post',
-    'hierarchical' => 'false',
+    'hierarchical' => false,
     'rewrite' => array('slug' => 'portfolio', 'with_front' => ''),
-    'query_var' => 'true',
-    'exclude_from_search' => 'false',
-    'has_archive' => 'false',
+    'query_var' => true,
+    'exclude_from_search' => false,
+    'has_archive' => false,
     'supports' => array( 'title','editor','excerpt','custom-fields','thumbnail','post-formats' ),
     )
   );
