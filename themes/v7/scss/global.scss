@@ -81,6 +81,16 @@ a {
   }
 }
 
+.content {
+  margin: 0 0 5%;
+}
+
+.error404 {
+  .content {
+    margin: 5% 0;
+  }
+}
+
 #wpstats {
   display: none;
 }
