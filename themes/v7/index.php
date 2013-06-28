@@ -2,7 +2,7 @@
 
 
 
-  <main role="main" class="main-content">
+  <section role="main" class="main-content">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>  
 
       <?php get_template_part( 'content', get_post_format() ); ?>
@@ -13,6 +13,6 @@
       <?php wp_pagenavi(); ?>
     </div><!-- .contain -->
 
-  </main><!-- .main-content -->
+  </section><!-- .main-content -->
 
 <?php get_footer(); ?>

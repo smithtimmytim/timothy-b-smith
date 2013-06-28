@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main role="main" class="main-content projects">
+<section role="main" class="main-content projects">
     <h1 class="statement">Portfolio</h1>
     <div class="entry">
       <div class="contain">
@@ -35,5 +35,5 @@
       </div><!-- .contain -->
     </div>
 
-</main>
+</section>
 <?php get_footer()?>
