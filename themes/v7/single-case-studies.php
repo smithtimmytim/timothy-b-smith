@@ -9,9 +9,9 @@
 
 <?php the_post(); ?>
 
-<section role="main" class="main-content"> 
-  <div class="contain">
-    <div class="content">
+<main role="main" class="main-content projects"> 
+  <div class="content">
+    <div class="contain">
     
       <h2><?php the_title(); ?><small><?php the_field('portfolio_item_class'); ?> Project</small></h2>
       <ul class="project-info">
@@ -25,13 +25,14 @@
 
       <?php the_content(); ?>
 
-      <?php previous_post_link('<p class="next-one">On to the next one! %link </p>'); ?>
+    </div><!-- .contain -->
+  </div><!-- end .content -->
 
-    </div><!-- end .content -->
+  <div class="cta">
+    <div class="contain">
+      <p>Like what you see?<br><a href="/contact">Tell me about your project</a></p>
+    </div><!-- .contain -->
+  </div>
 
-      <div class="cta">  
-        <p>Like what you see?<br><a href="/contact">Tell me about your project</a>.</p>
-      </div>
-  </div><!-- end .contain -->
-</section><!-- end .main-content -->
+</main><!-- end .main-content -->
 <?php get_footer() ?>
