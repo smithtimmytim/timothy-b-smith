@@ -3,6 +3,12 @@
   padding: 4.5% 0;
 }
 
+.single {
+  .entry {
+    border-bottom: none;
+  }
+}
+
 p.pubdate {
   color: lighten($darkColor, 40%);
   font-size: .85em;
@@ -76,6 +82,8 @@ hr {
     }
   }
 }
+
+
 
 // Format Standard 
 
