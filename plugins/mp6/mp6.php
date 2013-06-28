@@ -3,7 +3,7 @@
 Plugin Name: MP6
 Plugin URI: http://wordpress.org/extend/plugins/mp6/
 Description: This is a plugin to break the wp-admin UI, and is not recommended for non-savvy users.
-Version: 1.7
+Version: 1.8
 Author:
 Author URI: http://wordpress.org
 License: GPLv2 or later

@@ -1,7 +1,7 @@
 <?php
 class GFCommon{
 
-    public static $version = "1.7.4";
+    public static $version = "1.7.6";
     public static $tab_index = 1;
     public static $errors = array();
 
@@ -1698,15 +1698,19 @@ class GFCommon{
 
     public static function current_user_can_any($caps){
 
-        if(!is_array($caps))
-            return current_user_can($caps) || current_user_can("gform_full_access");
-
-        foreach($caps as $cap){
-            if(current_user_can($cap))
-                return true;
+        if(!is_array($caps)){
+            $has_cap = current_user_can($caps) || current_user_can("gform_full_access");
+            return $has_cap;
         }
 
-        return current_user_can("gform_full_access");
+        foreach($caps as $cap){
+            if(current_user_can($cap)){
+                return true;
+            }
+        }
+
+        $has_full_access = current_user_can("gform_full_access");
+        return $has_full_access;
     }
 
     public static function current_user_can_which($caps){
@@ -4739,16 +4743,20 @@ class GFCommon{
 
     public static function evaluate_conditional_logic($logic, $form, $lead) {
 
-        if(!$logic)
+        if(!$logic || !is_array($logic["rules"]))
             return true;
-
+        $entry_meta_keys = array_keys(GFFormsModel::get_entry_meta($form["id"]));
         $match_count = 0;
         if(is_array($logic["rules"])){
             foreach($logic["rules"] as $rule) {
 
-                $source_field = GFFormsModel::get_field($form, $rule["fieldId"]);
-                $field_value = empty($lead) ? GFFormsModel::get_field_value($source_field, array()) : GFFormsModel::get_lead_field_value($lead, $source_field);
-                $is_value_match = GFFormsModel::is_value_match($field_value, $rule["value"], $rule["operator"], $source_field);
+                if (in_array($rule["fieldId"], $entry_meta_keys)){
+                        $is_value_match = GFFormsModel::is_value_match(rgar($lead,$rule["fieldId"]), $rule["value"], $rule["operator"]);;
+                } else {
+                    $source_field = GFFormsModel::get_field($form, $rule["fieldId"]);
+                    $field_value = empty($lead) ? GFFormsModel::get_field_value($source_field, array()) : GFFormsModel::get_lead_field_value($lead, $source_field);
+                    $is_value_match = GFFormsModel::is_value_match($field_value, $rule["value"], $rule["operator"], $source_field);
+                }
 
                 if($is_value_match)
                     $match_count++;
@@ -5227,6 +5235,22 @@ class GFCommon{
 
     }
 
+    private function requires_gf_vars() {
+        $dependent_scripts = array( 'gform_form_admin', 'gform_gravityforms', 'gform_form_editor' );
+        foreach( $dependent_scripts as $script ) {
+            $value = wp_script_is( $script );
+            if( wp_script_is( $script ) )
+                return true;
+        }
+        return false;
+    }
+
+    public static function maybe_output_gf_vars() {
+        if( self::requires_gf_vars() ){
+            echo '<script type="text/javascript">' . self::gf_vars(false) . '</script>';
+        }
+    }
+
 }
 
 class GFCategoryWalker extends Walker {
@@ -5339,8 +5363,13 @@ class GFCache {
         return $success;
     }
 
-    public static function flush() {
+    public static function flush($flush_persistent = false) {
         global $wpdb;
+
+        self::$_cache = array();
+
+        if(false === $flush_persistent)
+            return true;
 
         if (is_multisite()) {
             $sql = "
@@ -5359,8 +5388,6 @@ class GFCache {
         $rows_deleted = $wpdb->query($sql);
 
         $success = $rows_deleted !== false ? true : false;
-
-        self::$_cache = array();
 
         return $success;
     }

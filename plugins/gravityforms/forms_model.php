@@ -264,6 +264,7 @@ class GFFormsModel {
         $description_placement = rgar($form, "descriptionPlacement") == "above" ? "above" : "below";
         if(is_array(rgar($form,"fields"))){
             foreach($form["fields"] as &$field){
+                $field["label"] = !isset($field["label"]) ? "" : $field["label"];
                 $field["formId"] = $form["id"];
                 $field["pageNumber"] = $page_number;
                 $field["descriptionPlacement"] = $description_placement;
@@ -727,6 +728,8 @@ class GFFormsModel {
         else
             $result = $wpdb->query( $wpdb->prepare("INSERT INTO $meta_table_name(form_id, $meta_name) VALUES(%d, %s)", $form_id, $form_meta ) );
 
+        self::$_current_forms[$form_id] = null;
+
         return $result;
     }
 
@@ -1148,6 +1151,11 @@ class GFFormsModel {
 
         if(!empty($calculation_fields)) {
             foreach($calculation_fields as $field) {
+
+                // only save fields that are not hidden
+                if(RGFormsModel::is_field_hidden($form, $field, array()) )
+                    continue;
+
                 if(isset($field["inputs"]) && is_array($field["inputs"])){
                     foreach($field["inputs"] as $input) {
                         $lead[(string)$input['id']] = self::get_prepared_input_value($form, $field, $lead, $input["id"]);
@@ -1156,6 +1164,7 @@ class GFFormsModel {
                 else{
                     $lead[$field['id']] = self::get_prepared_input_value($form, $field, $lead, $field["id"]);
                 }
+
             }
             self::refresh_product_cache($form, $lead);
         }
@@ -2413,16 +2422,16 @@ class GFFormsModel {
             }
         }
         else{
-            //Deleting details for this field
-            $sql = $wpdb->prepare("DELETE FROM $lead_detail_table WHERE lead_id=%d AND field_number BETWEEN %s AND %s ", $lead["id"], doubleval($input_id) - 0.001, doubleval($input_id) + 0.001);
-            $wpdb->query($sql);
-
             //Deleting long field if there is one
             $sql = $wpdb->prepare("DELETE FROM $lead_detail_long_table
                                     WHERE lead_detail_id IN(
                                         SELECT id FROM $lead_detail_table WHERE lead_id=%d AND field_number BETWEEN %s AND %s
                                     )",
                                     $lead["id"], doubleval($input_id) - 0.001, doubleval($input_id) + 0.001);
+            $wpdb->query($sql);
+
+            //Deleting details for this field
+            $sql = $wpdb->prepare("DELETE FROM $lead_detail_table WHERE lead_id=%d AND field_number BETWEEN %s AND %s ", $lead["id"], doubleval($input_id) - 0.001, doubleval($input_id) + 0.001);
             $wpdb->query($sql);
         }
     }
