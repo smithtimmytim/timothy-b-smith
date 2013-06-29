@@ -76,6 +76,19 @@ a {
   }
   @media screen and (max-width: 700px ) {
     p, h2, h3, p.pubdate, blockquote, .post-helpers {
+      margin-left: 0 !important;
+    }
+  }
+}
+
+.module {
+  border-bottom: 1px solid $borderColor;
+  padding: 0 0 4.5%;
+  h1 {
+    margin: 0 0 0 10%;
+  }
+  @media screen and (max-width: 700px ) {
+    h1 {
       margin-left: 0;
     }
   }
@@ -110,14 +123,11 @@ a {
 //Contact Page Styles
 @import "contact-page";
 
-// Footer Styles
-@import "footer";
-
-
-
-
 // Page Navigation Styles
 @import "pagenavi";
+
+// Footer Styles
+@import "footer";
 
 
 

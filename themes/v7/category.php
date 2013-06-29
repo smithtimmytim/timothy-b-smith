@@ -2,7 +2,11 @@
 
   <main role="main" class="main-content">
 
-    <h1 class="statement">Posts filed in &lsquo;<?php single_cat_title(); ?>&rsquo;</h1>
+    <div class="module">
+      <div class="contain">
+        <h1 class="statement">Posts filed in &lsquo;<?php single_cat_title(); ?>&rsquo;</h1>
+      </div>
+    </div>
 
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>  
 

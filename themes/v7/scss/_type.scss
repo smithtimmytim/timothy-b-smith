@@ -9,11 +9,9 @@
 }
 
 .statement {
-  border-bottom: 1px solid $borderColor;
   font-size: 2em;
   font-weight: 200;
   line-height: 130%;
-  padding: 0 0 5% 5.5%;
 }
 
 body {
@@ -95,6 +93,18 @@ ol {
       margin: 0 0 3.125% 0 !important;
     }
   }
+}
+
+pre {
+  font-family: Menlo, Monaco, monospace;
+  display: block;
+  word-break: normal;
+  font-size: .75em;
+  margin: 0 0 03.125%;
+}
+
+code {
+  line-height: 1.4;
 }
 
 [data-icon]:before {

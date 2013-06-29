@@ -1,10 +1,15 @@
 <?php get_header(); ?>
 
 <section role="main" class="main-content projects">
-    <h1 class="statement">Portfolio</h1>
+    <div class="module">
+      <div class="contain">
+        <h1 class="statement">Portfolio</h1>
+      </div>
+    </div>
+
     <div class="entry">
       <div class="contain">
-        <p>I'm a Designer and Front-End Developer with extensive experience designing user interfaces and websites.</p>
+        <p>I’m a Designer and Front-End Developer with extensive experience designing user interfaces and websites.</p>
       </div><!-- .contain -->
     </div><!-- end .entry -->
 
