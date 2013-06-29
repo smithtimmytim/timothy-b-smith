@@ -95,29 +95,27 @@
 
 .ginput_container {
   input {
+    background: lighten($borderColor, 1.5%);
     color: $darkColor;
-    background: white;
-    box-shadow: 0 0 0 1px darken($borderColor, 5%);
     @include border-radius(2px);
     padding: 10px;
     width: 100%;
-    @include transition(box-shadow .2s ease-in-out);
+    @include transition(background .2s ease-in-out);
     &:focus {
-      box-shadow: 0 0 0 1px $jazzColor, 0 0 3px $jazzColor;
+      background: lighten($borderColor, 3%);
     }
   }
   textarea{
+    background: lighten($borderColor, 1.5%);
     color: $darkColor;
-    background: white;
-    box-shadow: 0 0 0 1px darken($borderColor, 5%);
     @include border-radius(2px);
     padding: 10px;
     width: 100%;
     height: 150px;
     resize: none;
-    @include transition(box-shadow .2s ease-in-out);
+    @include transition(background .2s ease-in-out);
     &:focus {
-      box-shadow: 0 0 0 1px $jazzColor, 0 0 3px $jazzColor;
+      background: lighten($borderColor, 3%);
     }
   }
 }
@@ -151,15 +149,15 @@
 }
 
 ::-webkit-input-placeholder {
-   color: lighten($darkColor, 40%);
+   color: lighten($darkColor, 50%);
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: lighten($darkColor, 40%);  
+   color: lighten($darkColor, 50%);  
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: lighten($darkColor, 40%);  
+   color: lighten($darkColor, 50%);  
 }
 
 .button {
@@ -172,51 +170,4 @@
   &:hover {
     background: darken($linkColor, 10%);
   }
-}
-
-// Contact Form Date Picker
-
-.ui-datepicker-control, .ui-datepicker-links, .ui-datepicker-header {
-  margin-bottom: 5px;
-}
-
-#ui-datepicker-div {
-  padding: 15px;
-  width: auto !important;
-  a {
-    color: white;
-  }
-}
-
-.ui-datepicker {
-  background: $darkColor;
-}
-
-.ui-datepicker-clear {
-  display: inline-block;
-  padding-right: 5px;
-}
-
-.ui-datepicker-close {
-  display: inline-block;
-}
-
-.ui-datepicker-prev, .ui-datepicker-current, .ui-datepicker-next {
-  display: inline-block;
-  padding-right: 5px;
-}
-
-.ui-datepicker-next {
-  padding-right: 0;
-}
-
-.ui-datepicker {
-  td {
-    padding: 3px;
-  }
-}
-
-.ui-datepicker-days-row {
-  border-bottom: 1px solid lighten($darkColor, 10%);
-  padding: 5px 0;
 }
