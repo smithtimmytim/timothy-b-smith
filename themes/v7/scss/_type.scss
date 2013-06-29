@@ -101,7 +101,7 @@ ol {
   content: attr(data-icon);
   @include iconfont;
   speak: none;
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 @font-face {

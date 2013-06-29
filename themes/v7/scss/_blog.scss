@@ -1,6 +1,9 @@
 .entry {
   border-bottom: 1px solid $borderColor;
   padding: 4.5% 0;
+  @media screen and (max-width: 800px ) {
+    padding: 6.5% 0;
+  }
 }
 
 .single {

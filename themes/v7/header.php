@@ -39,7 +39,7 @@
     <div class="logo-box">
       <a href="/" class="logo"></a>
       <h1><a href="/">Tim Smith</a></h1>
-      <h2>Designer. Broadcaster. Host of <a target="_blank" href="http://theeastwing.net">The East Wing</a>. Coffee addict.</h2>
+      <h2>Designer. Broadcaster. Host of The East Wing. Coffee addict.</h2>
     </div><!-- .logo-box -->
 
     <nav>
