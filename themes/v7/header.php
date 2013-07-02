@@ -59,7 +59,7 @@
         <div class="freelance-availability yes">
           <div class="content">
             <div class="contain">
-              <p>I'm Currently Available for Work.</p>
+              <p>I’m Currently Available for Work.</p>
             </div>
           </div><!-- .module -->   
         </div> <!-- .freelance-availability -->
