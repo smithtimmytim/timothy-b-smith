@@ -1,6 +1,9 @@
 footer {
   border-top: 1px solid $borderColor;
   padding: 5% 0;
+  .content {
+    margin: 0;
+  }
   @media screen and (max-width: 700px ) {
     padding: 5% 0;
   }

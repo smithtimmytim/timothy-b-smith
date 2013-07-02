@@ -6,6 +6,12 @@
   }
 }
 
+.type-post:first-child {
+  .entry {
+    padding-top: 0;
+  }
+}
+
 .single {
   .entry {
     border-bottom: none;

@@ -57,9 +57,11 @@
     
       <a href="/contact">
         <div class="freelance-availability yes">
-          <div class="contain">
-            <p>I'm Currently Available for Work.</p>
-          </div>    
+          <div class="content">
+            <div class="contain">
+              <p>I'm Currently Available for Work.</p>
+            </div>
+          </div><!-- .module -->   
         </div> <!-- .freelance-availability -->
       </a>
 
