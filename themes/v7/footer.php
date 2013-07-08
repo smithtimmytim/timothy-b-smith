@@ -4,6 +4,11 @@
       <div class="contain">
         <small>&copy; 2008&ndash;<?php echo date('Y')?> Timothy B. Smith. <a href="http://ttimsmith.com/feed">Subscribe via RSS</a></small>
         <small>Kindly hosted by <a href="http://www.mediatemple.net/#a_aid=4f42c6d7d53a5" target="_blank">Media Temple</a>.</small>
+        
+        <div class="search-form alt">
+          <?php get_search_form(); ?>
+        </div><!-- .search-form -->
+
       </div><!-- .contain -->
     </div><!-- .content -->
 

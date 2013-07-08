@@ -49,6 +49,10 @@
       <a target="_blank" href="https://twitter.com/ttimsmith">@ttimsmith</a>
     </nav>
 
+    <div class="search-form">
+      <?php get_search_form(); ?>
+    </div><!-- .search-form -->
+
   </header><!-- header -->
 
 

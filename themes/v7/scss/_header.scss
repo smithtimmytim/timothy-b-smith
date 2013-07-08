@@ -29,6 +29,7 @@
   @media screen and (max-width: 700px ) {
     position: static;
     width: 100%;
+    overflow: hidden;
   }
   h1 {
     color: white;
@@ -93,12 +94,9 @@
 }
 
 nav {
-  margin: 0 0 3em 10%;
-  @media screen and (max-width: 990px ) {
-    margin: 0 0 0 10%;
-  }
+  margin: 0 0 2em 10%;
   @media screen and (max-width: 800px ) {
-    margin: 0;
+    margin: 0 0 2em;
   }
   @media screen and (max-width: 700px ) {
     text-align: center;
@@ -139,30 +137,100 @@ nav {
   }
 }
 
-// .search-form {
-//   margin: 0 8% 0 8%;
-//   #s {
-//     background: lighten($darkColor, 10%);
-//     border-radius: 4px 0 0 4px;
-//     float: left;
-//     padding: 12px 10px;
-//     width: 70%;
-//     @include transition(background .2s ease-in-out);
-//     &:focus {
-//       background: white;
-//     }
-//   }
-//   #searchsubmit {
-//     background: darken($darkColor, 10%);
-//     border-radius: 0 4px 4px 0;
-//     color: white;
-//     padding: 12px 10px;
-//     float: left;
-//     font-weight: bold;
-//     width: 30%;
-//     @include transition(background .2s ease-in-out);
-//     &:hover {
-//       background: darken($linkColor, 10%);
-//     }
-//   }
-// }
+.search-form {
+  margin: 0 10% 0 10%;
+  overflow: hidden;
+  @media screen and (max-width: 800px ) {
+    margin: 0 8% 0 8%;
+  }
+  @media screen and (max-width: 700px ) {
+    display: none;
+  }
+  #s {
+    background: lighten($darkColor, 10%);
+    border-radius: 4px 0 0 4px;
+    float: left;
+    padding: 12px 10px;
+    width: 70%;
+    @include transition(background .2s ease-in-out);
+    @media screen and (max-width: 1130px ) {
+      width: 65%;
+    }
+    @media screen and (max-width: 990px ) {
+      width: 60%;
+      height: 48px;
+    }
+    @media screen and (max-width: 800px ) {
+      padding: 10px 8px;
+      height: 40px;
+    }
+    @media screen and (max-width: 700px ) {
+      padding: 10px 8px;
+      width: 70%;
+      height: 44px;
+    }
+    &:focus {
+      background: white;
+    }
+  }
+  #searchsubmit {
+    background: darken($darkColor, 10%);
+    border-radius: 0 4px 4px 0;
+    color: white;
+    padding: 12px 10px;
+    float: left;
+    font-size: .85em;
+    font-weight: bold;
+    width: 30%;
+    height: 51px;
+    @include transition(background .2s ease-in-out);
+    @media screen and (max-width: 1130px ) {
+      width: 35%;
+    }
+    @media screen and (max-width: 990px ) {
+      width: 40%;
+      height: 48px;
+    }
+    @media screen and (max-width: 800px ) {
+      padding: 10px 8px;
+      height: 40px;
+    }
+    @media screen and (max-width: 700px ) {
+      padding: 10px 8px;
+      width: 30%;
+      height: 44px;
+    }
+    &:hover {
+      background: $jazzColor;
+    }
+  }
+  &.alt {
+    display: none;
+    margin: 5% 0 0 10%;
+    width: 65%;
+    @media screen and (max-width: 700px ) {
+      display: block;
+      margin: 5% 0 0;
+    }
+    @media screen and (max-width: 400px ) {
+      width: 80%
+    }
+    #s {
+      background: lighten($borderColor, 1.5%);
+      color: $darkColor;
+      width: 70%;
+      @include transition(background .2s ease-in-out);
+      &:focus {
+        background: lighten($borderColor, 3%);
+      }
+    }
+    #searchsubmit {
+      background: $linkColor;
+      color: white;
+      @include transition(background .2s ease-in-out);
+      &:hover {
+        background: darken($linkColor, 10%);
+      }
+    }
+  }
+}
