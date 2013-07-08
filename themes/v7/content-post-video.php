@@ -1,6 +1,6 @@
 <div class="video-pusher"><?php echo get_post_meta($post->ID, 'video-embed', true); ?></div>
 
-<article class="entry">
+<article class="entry content">
   <div class="contain">
     <p class="pubdate"><time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('F jS, Y');?></time></p>
     

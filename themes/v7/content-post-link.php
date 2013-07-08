@@ -1,4 +1,4 @@
- <article class="entry"> 
+ <article class="entry content"> 
   <div class="contain">    
     <p class="pubdate"><time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('F jS, Y');?></time></p>
     
