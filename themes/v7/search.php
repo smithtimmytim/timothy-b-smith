@@ -20,7 +20,7 @@
 
     <div class="content">
       <div class="contain">
-        <p>Sorry dude, I couldn’t find anything. Try another search?</p>
+        <p>Sorry homie, I couldn’t find anything. Try another search?</p>
       </div>
     </div>
 
