@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 
 <head>
+
+  <!-- 
+
+  @@@@@@@@@@@@@@@@@  @@@   @@@          @@@ 
+  @@@@@@@@@@@@@@@@@  @@@   @@@@        @@@@
+         @@@         @@@   @@@ @      @ @@@
+         @@@         @@@   @@@  @@  @@  @@@
+         @@@         @@@   @@@   @@@    @@@
+         @@@         @@@   @@@          @@@
+         @@@         @@@   @@@          @@@
+         @@@         @@@   @@@          @@@
+
+  How much does a polar bear weigh? Just enough to break the ice.
+
+  Made with love in beautiful Saint Paul, Minnesota.
+  © 2013 Timothy B. Smith.
+
+  -->
+
+
+
 	<meta charset="utf-8" />
   <title><?php is_home() ? bloginfo('description') : wp_title(''); ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,15 +29,10 @@
 
   <link rel="shortcut icon" href="/favicon.ico">
 
-  <link rel="author" href="https://plus.google.com/117161754644004218749/posts">
+  <link rel="author" href="https://plus.google.com/117161754644004218749">
 	
 	<!-- My styles -->
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/global.css"/>
-  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/responsify.css"/>
-
-  <?php if (is_page_template("portfolio.php") or is_singular('case-studies')) { ?>
-  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/portfolio.css">
-  <?php } ?>
 
   <!-- Typekit Code -->
   <script type="text/javascript" src="//use.typekit.net/mev1xgw.js"></script>
