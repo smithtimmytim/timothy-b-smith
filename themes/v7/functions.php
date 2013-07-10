@@ -44,6 +44,11 @@ function create_post_type() {
 
 add_theme_support( 'post-formats', array( 'link', 'video' ) );
 
+// Adding Markdown support to case studies
+add_action( 'init', 'ts_add_markdown_support' );
+function ts_add_markdown_support(){
+    add_post_type_support( 'case-studies', 'markdown-osi' );
+}
 
 
 // link posts url_link
