@@ -19,6 +19,16 @@
   }
 }
 
+.preview-warning {
+  background: lighten($warningRed, 30%);
+  color: darken($warningRed, 20%);
+  margin: 0 0 3.5%;
+  padding: 2% 0;
+  p {
+    line-height: 140%;
+  }
+}
+
 p.pubdate {
   color: lighten($darkColor, 40%);
   font-size: .85em;

@@ -1,5 +1,14 @@
+  <? if( is_preview() ) : ?>
+  <div class="preview-warning">
+    <div class="contain">
+      <p><strong>You are viewing a preview of the post <? the_title(); ?>, which will be published soon.</strong></p>
+    </div><!-- .contain -->
+  </div><!-- .preview-warning -->
+  <? endif; ?>
+
   <article class="entry content">
     <div class="contain">
+      
       <p class="pubdate"><time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('F jS, Y');?></time></p>
       <h2><?php the_title(); ?></h2>
 

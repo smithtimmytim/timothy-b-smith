@@ -22,7 +22,7 @@
     background: #74c167;
   }
   &.no {
-    background: #e54a4f;
+    background: $warningRed;
   }
 }
 
@@ -140,7 +140,7 @@
 }
 
 .gfield_required, .validation_error, .validation_message {
-  color: #e54a4f;
+  color: $warningRed;
 }
 
 .validation_error {
