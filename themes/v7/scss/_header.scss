@@ -1,6 +1,6 @@
 .freelance-availability {
   background: $jazzColor;
-  color: white;
+  color: darken($jazzColor, 40%);
   font-weight: bold;
   padding: 1.5% 0;
   @media screen and (max-width: 480px ) {
