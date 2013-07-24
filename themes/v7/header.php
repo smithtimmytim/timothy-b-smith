@@ -55,7 +55,7 @@
     <div class="logo-box">
       <a href="/" class="logo"></a>
       <h1><a href="/">Tim Smith</a></h1>
-      <h2>Designer. Broadcaster. Coffee addict.</h2>
+      <h2>Designer, broadcaster, and coffee addict.</h2>
     </div><!-- .logo-box -->
 
     <nav>
