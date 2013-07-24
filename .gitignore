@@ -3,6 +3,7 @@
 /uploads/
 /upgrade/
 .DS_Store
+/Rakefile
 
 themes/v7/.sass-cache/
 
@@ -18,3 +19,9 @@ timothybsmith_site.sublime-workspace
 themes/v7/codekit-config.json
 /themes/v7/.sass-cache/
 codekit-config.json
+/themes/::newtim/
+/themes/::timothybsmith/
+/themes/::timothybsmithv4/
+/themes/::v5/
+/themes/::v6.5/
+themes/::v6/

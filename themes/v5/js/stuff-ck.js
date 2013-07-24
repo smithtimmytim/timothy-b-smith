@@ -1,1 +1,0 @@
-$(".main-content").fitVids();$(".content, .video-pusher").fitVids();$("a").each(function(){var e=new RegExp("/"+window.location.host+"/");e.test(this.href)||$(this).click(function(e){e.preventDefault();e.stopPropagation();window.open(this.href,"_blank")})});
