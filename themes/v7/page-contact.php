@@ -1,10 +1,3 @@
-<?php
-/*
-Template Name: Contact
-*/
-?>
-
-
 <?php get_header(); ?>
 
 <section role="main" class="main-content">
