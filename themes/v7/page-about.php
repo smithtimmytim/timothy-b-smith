@@ -6,9 +6,9 @@
 
       <?php the_post (); ?>
     
-      <!-- <h1 class="statement">Designer, talker &amp; coffee addict.</h1> -->
       <?php the_post_thumbnail(); ?>
       <?php the_content(); ?>
+
 
       <div class="half-col left">
 
