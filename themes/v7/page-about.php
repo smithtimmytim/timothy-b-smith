@@ -12,14 +12,12 @@
 
       <div class="half-col left">
 
-        <?php if(get_field('personal_projects')) : ?>
-          <h3>Projects</h3>
-          <ul class="published">
-            <?php while(has_sub_field('personal_projects')) : ?>
-              <li><a href="<?php the_sub_field('project_url'); ?>"><?php the_sub_field('project_name'); ?><small><?php the_sub_field('project_start_date'); ?>&ndash;<?php the_sub_field('project_end_date'); ?></small></a></li>
-            <?php endwhile; ?>
-          </ul> 
-        <?php endif; ?>
+        <h3>Projects</h3>
+        <ul class="published">
+          <li><a href="http://theeastwing.net">The East Wing<small>February 2012&ndash;Present</small></a></li>
+          <li><a href="http://timlikestoteach.com">Tim Likes to Teach<small>March 2013&ndash;Present</small></a></li>
+          <li><a href="http://bytesizenews.co">Bytesize<small>July 2013&ndash;Present</small></a></li>
+        </ul> 
 
         <?php if(get_field('select_articles')): ?>
           <h3>Select Articles</h3>
